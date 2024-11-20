@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\thinkschool.OnlineExam.Api.props" />
+</Project>

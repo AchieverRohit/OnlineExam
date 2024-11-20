@@ -1,0 +1,1 @@
+Document here : https://dev.azure.com/thinkShip/Kavi%202.0/_wiki/wikis/Kavi-2.0.wiki/109/Email-Authentication

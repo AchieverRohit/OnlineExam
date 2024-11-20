@@ -1,0 +1,14 @@
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using thinkschool.OnlineExam.Core.Constants;
+global using thinkschool.OnlineExam.DataAccess.Persistence;
+global using thinkschool.OnlineExam.DataAccess.Repositories;
+global using System.Linq.Expressions;
+global using System.Reflection;
+global using thinkschool.OnlineExam.DataAccess.Common;
+global using thinkschool.OnlineExam.DataAccess.Interfaces;
+global using thinkschool.OnlineExam.Core.Common;
+global using static thinkschool.OnlineExam.Core.Enums.PaginationEnums;
+global using thinkschool.OnlineExam.Core;
+global using thinkschool.OnlineExam.Core.Entities;

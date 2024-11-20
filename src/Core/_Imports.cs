@@ -1,0 +1,14 @@
+global using System.ComponentModel.DataAnnotations.Schema;
+global using static thinkschool.OnlineExam.Core.Enums.PaginationEnums;
+global using System.Runtime.Serialization;
+global using AutoMapper;
+global using System.Reflection;
+global using thinkschool.OnlineExam.Core.Common;
+global using FluentValidation;
+global using FluentValidation.AspNetCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using thinkschool.OnlineExam.Core.Common.Mapping;
+global using System.Net;
+global using thinkschool.OnlineExam.Core.Models;
+global using thinkschool.OnlineExam.Core.Entities;

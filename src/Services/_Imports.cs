@@ -1,0 +1,16 @@
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using thinkschool.OnlineExam.DataAccess;
+global using thinkschool.OnlineExam.Services.IServices;
+global using thinkschool.OnlineExam.DataAccess.Interfaces;
+global using thinkschool.OnlineExam.Services.Services;
+global using thinkschool.OnlineExam.DataAccess.Repositories;
+global using thinkschool.OnlineExam.Core.Entities;
+global using Microsoft.EntityFrameworkCore;
+global using AutoMapper;
+global using thinkschool.OnlineExam.Core.Models;
+global using thinkschool.OnlineExam.Core.Models.Base;
+global using thinkschool.OnlineExam.Core.Common.Exceptions;
+global using thinkschool.OnlineExam.Core.Constants;
+global using System.Net;
+global using EmailAuth;

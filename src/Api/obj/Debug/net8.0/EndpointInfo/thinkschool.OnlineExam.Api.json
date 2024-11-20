@@ -1,0 +1,5423 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Demo API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/ApplicationUser/GetAllApplicationUser": {
+      "post": {
+        "tags": [
+          "ApplicationUser"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllApplicationUserReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllApplicationUserReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllApplicationUserReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllApplicationUserReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ApplicationUser/GetApplicationUserById/{Id}/{withDetails}": {
+      "get": {
+        "tags": [
+          "ApplicationUser"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withDetails",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDetailDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDetailDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDetailDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ApplicationUser/AddApplicationUser": {
+      "post": {
+        "tags": [
+          "ApplicationUser"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddApplicationUserReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddApplicationUserReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddApplicationUserReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddApplicationUserReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ApplicationUser/UpdateApplicationUser": {
+      "post": {
+        "tags": [
+          "ApplicationUser"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateApplicationUserReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateApplicationUserReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateApplicationUserReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateApplicationUserReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUserResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ApplicationUser/DeleteApplicationUser/{Id}": {
+      "delete": {
+        "tags": [
+          "ApplicationUser"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/check-email": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Exam/GetAllExam": {
+      "post": {
+        "tags": [
+          "Exam"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllExamReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllExamReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllExamReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllExamReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Exam/GetExamById/{ExamId}/{withDetails}": {
+      "get": {
+        "tags": [
+          "Exam"
+        ],
+        "parameters": [
+          {
+            "name": "ExamId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "withDetails",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDetailDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDetailDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDetailDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Exam/AddExam": {
+      "post": {
+        "tags": [
+          "Exam"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddExamReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddExamReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddExamReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddExamReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Exam/UpdateExam": {
+      "post": {
+        "tags": [
+          "Exam"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateExamReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateExamReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateExamReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateExamReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Exam/DeleteExam/{ExamId}": {
+      "delete": {
+        "tags": [
+          "Exam"
+        ],
+        "parameters": [
+          {
+            "name": "ExamId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Exam/GetActiveExams": {
+      "get": {
+        "tags": [
+          "Exam"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ExamResult/GetAllExamResult": {
+      "post": {
+        "tags": [
+          "ExamResult"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllExamResultReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllExamResultReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllExamResultReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllExamResultReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ExamResult/GetExamResultById/{ExamResultId}/{withDetails}": {
+      "get": {
+        "tags": [
+          "ExamResult"
+        ],
+        "parameters": [
+          {
+            "name": "ExamResultId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "withDetails",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDetailDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDetailDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDetailDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ExamResult/AddExamResult": {
+      "post": {
+        "tags": [
+          "ExamResult"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddExamResultReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddExamResultReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddExamResultReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddExamResultReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ExamResult/UpdateExamResult": {
+      "post": {
+        "tags": [
+          "ExamResult"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateExamResultReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateExamResultReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateExamResultReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateExamResultReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ExamResult/DeleteExamResult/{ExamResultId}": {
+      "delete": {
+        "tags": [
+          "ExamResult"
+        ],
+        "parameters": [
+          {
+            "name": "ExamResultId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Option/GetAllOption": {
+      "post": {
+        "tags": [
+          "Option"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllOptionReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllOptionReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllOptionReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllOptionReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Option/GetOptionById/{OptionId}/{withDetails}": {
+      "get": {
+        "tags": [
+          "Option"
+        ],
+        "parameters": [
+          {
+            "name": "OptionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "withDetails",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDetailDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDetailDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDetailDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Option/AddOption": {
+      "post": {
+        "tags": [
+          "Option"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddOptionReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddOptionReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddOptionReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddOptionReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Option/UpdateOption": {
+      "post": {
+        "tags": [
+          "Option"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOptionReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOptionReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOptionReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOptionReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Option/DeleteOption/{OptionId}": {
+      "delete": {
+        "tags": [
+          "Option"
+        ],
+        "parameters": [
+          {
+            "name": "OptionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Question/GetAllQuestion": {
+      "post": {
+        "tags": [
+          "Question"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllQuestionReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllQuestionReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllQuestionReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllQuestionReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Question/GetQuestionById/{QuestionId}/{withDetails}": {
+      "get": {
+        "tags": [
+          "Question"
+        ],
+        "parameters": [
+          {
+            "name": "QuestionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "withDetails",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDetailDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDetailDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDetailDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Question/AddQuestion": {
+      "post": {
+        "tags": [
+          "Question"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddQuestionReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddQuestionReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddQuestionReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddQuestionReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Question/UpdateQuestion": {
+      "post": {
+        "tags": [
+          "Question"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestionReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestionReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestionReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuestionReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Question/DeleteQuestion/{QuestionId}": {
+      "delete": {
+        "tags": [
+          "Question"
+        ],
+        "parameters": [
+          {
+            "name": "QuestionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Section/GetAllSection": {
+      "post": {
+        "tags": [
+          "Section"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllSectionReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllSectionReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllSectionReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllSectionReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Section/GetSectionById/{SectionId}/{withDetails}": {
+      "get": {
+        "tags": [
+          "Section"
+        ],
+        "parameters": [
+          {
+            "name": "SectionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "withDetails",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDetailDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDetailDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDetailDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Section/AddSection": {
+      "post": {
+        "tags": [
+          "Section"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSectionReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSectionReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSectionReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSectionReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Section/UpdateSection": {
+      "post": {
+        "tags": [
+          "Section"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSectionReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSectionReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSectionReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSectionReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Section/DeleteSection/{SectionId}": {
+      "delete": {
+        "tags": [
+          "Section"
+        ],
+        "parameters": [
+          {
+            "name": "SectionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/SectionResult/GetAllSectionResult": {
+      "post": {
+        "tags": [
+          "SectionResult"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllSectionResultReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllSectionResultReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllSectionResultReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllSectionResultReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/SectionResult/GetSectionResultById/{SectionResultId}/{withDetails}": {
+      "get": {
+        "tags": [
+          "SectionResult"
+        ],
+        "parameters": [
+          {
+            "name": "SectionResultId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "withDetails",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDetailDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDetailDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDetailDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/SectionResult/AddSectionResult": {
+      "post": {
+        "tags": [
+          "SectionResult"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSectionResultReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSectionResultReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSectionResultReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSectionResultReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/SectionResult/UpdateSectionResult": {
+      "post": {
+        "tags": [
+          "SectionResult"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSectionResultReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSectionResultReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSectionResultReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSectionResultReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionResultResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/SectionResult/DeleteSectionResult/{SectionResultId}": {
+      "delete": {
+        "tags": [
+          "SectionResult"
+        ],
+        "parameters": [
+          {
+            "name": "SectionResultId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/UserAnswer/GetAllUserAnswer": {
+      "post": {
+        "tags": [
+          "UserAnswer"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllUserAnswerReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllUserAnswerReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllUserAnswerReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllUserAnswerReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserAnswer/GetUserAnswerById/{UserAnswerId}/{withDetails}": {
+      "get": {
+        "tags": [
+          "UserAnswer"
+        ],
+        "parameters": [
+          {
+            "name": "UserAnswerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "withDetails",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDetailDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDetailDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDetailDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserAnswer/AddUserAnswer": {
+      "post": {
+        "tags": [
+          "UserAnswer"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUserAnswerReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUserAnswerReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUserAnswerReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUserAnswerReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserAnswer/UpdateUserAnswer": {
+      "post": {
+        "tags": [
+          "UserAnswer"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserAnswerReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserAnswerReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserAnswerReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserAnswerReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAnswerResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserAnswer/DeleteUserAnswer/{UserAnswerId}": {
+      "delete": {
+        "tags": [
+          "UserAnswer"
+        ],
+        "parameters": [
+          {
+            "name": "UserAnswerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/UserExam/GetAllUserExam": {
+      "post": {
+        "tags": [
+          "UserExam"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllUserExamReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllUserExamReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllUserExamReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllUserExamReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserExam/GetUserExamById/{UserExamId}/{withDetails}": {
+      "get": {
+        "tags": [
+          "UserExam"
+        ],
+        "parameters": [
+          {
+            "name": "UserExamId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "withDetails",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDetailDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDetailDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDetailDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserExam/AddUserExam": {
+      "post": {
+        "tags": [
+          "UserExam"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUserExamReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUserExamReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUserExamReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUserExamReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserExam/UpdateUserExam": {
+      "post": {
+        "tags": [
+          "UserExam"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserExamReqDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserExamReqDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserExamReqDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserExamReqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamResDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserExam/DeleteUserExam/{UserExamId}": {
+      "delete": {
+        "tags": [
+          "UserExam"
+        ],
+        "parameters": [
+          {
+            "name": "UserExamId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddApplicationUserReqDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean"
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean"
+          },
+          "twoFactorEnabled": {
+            "type": "boolean"
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean"
+          },
+          "accessFailedCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddExamReqDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "duration": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "isRandomized": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddExamResultReqDto": {
+        "type": "object",
+        "properties": {
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalObtainedMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "resultStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddOptionReqDto": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "optionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCorrect": {
+            "type": "boolean"
+          },
+          "marks": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddQuestionReqDto": {
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMedia": {
+            "type": "boolean"
+          },
+          "mediaType": {
+            "type": "string",
+            "nullable": true
+          },
+          "mediaURL": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMultipleChoice": {
+            "type": "boolean"
+          },
+          "isFromQuestionBank": {
+            "type": "boolean"
+          },
+          "questionMaxMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddSectionReqDto": {
+        "type": "object",
+        "properties": {
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "weightagePercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddSectionResultReqDto": {
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionsAttempted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "marksObtained": {
+            "type": "number",
+            "format": "double"
+          },
+          "resultStatus": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddUserAnswerReqDto": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddUserExamReqDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finishedOn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "examStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isAutoSubmitted": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "noOfAttempt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationUserResDetailDto": {
+        "type": "object",
+        "properties": {
+          "userExamUsers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserExamResDto"
+            },
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean"
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean"
+          },
+          "twoFactorEnabled": {
+            "type": "boolean"
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean"
+          },
+          "accessFailedCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationUserResDetailDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ApplicationUserResDetailDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationUserResDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean"
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean"
+          },
+          "twoFactorEnabled": {
+            "type": "boolean"
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean"
+          },
+          "accessFailedCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationUserResDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicationUserResDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationUserResDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ApplicationUserResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanFilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BooleanFilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanFilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanNullableFilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BooleanNullableFilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanNullableFilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComparisonOperator": {
+        "enum": [
+          "Equals",
+          "NotEquals",
+          "GreaterThan",
+          "LessThan",
+          "GreaterThanOrEqual",
+          "LessThanOrEqual",
+          "Contains"
+        ],
+        "type": "string"
+      },
+      "DateTimeFilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DateTimeFilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateTimeFilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateTimeNullableFilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DateTimeNullableFilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateTimeNullableFilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateTimeOffsetNullableFilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DateTimeOffsetNullableFilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateTimeOffsetNullableFilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DecimalFilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DecimalFilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DecimalFilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number",
+            "format": "double"
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DecimalNullableFilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DecimalNullableFilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DecimalNullableFilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoubleFilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DoubleFilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoubleFilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number",
+            "format": "double"
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamDto": {
+        "type": "object",
+        "properties": {
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "duration": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "isRandomized": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExamDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResDetailDto": {
+        "type": "object",
+        "properties": {
+          "sectionExams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SectionResDto"
+            },
+            "nullable": true
+          },
+          "userExamExams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserExamResDto"
+            },
+            "nullable": true
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "duration": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "isRandomized": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResDetailDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ExamResDetailDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResDto": {
+        "type": "object",
+        "properties": {
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "duration": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "isRandomized": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExamResDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ExamResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResultResDetailDto": {
+        "type": "object",
+        "properties": {
+          "examResultUserExamIdfk": {
+            "$ref": "#/components/schemas/UserExamResDto"
+          },
+          "examResultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalObtainedMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "resultStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResultResDetailDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ExamResultResDetailDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResultResDto": {
+        "type": "object",
+        "properties": {
+          "examResultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalObtainedMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "resultStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResultResDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExamResultResDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResultResDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ExamResultResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllApplicationUserReqDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "firstName": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "lastName": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "userName": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "normalizedUserName": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "email": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "normalizedEmail": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "emailConfirmed": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "passwordHash": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "securityStamp": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "concurrencyStamp": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "phoneNumber": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "phoneNumberConfirmed": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "twoFactorEnabled": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "lockoutEnd": {
+            "$ref": "#/components/schemas/DateTimeOffsetNullableFilterExpression"
+          },
+          "lockoutEnabled": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "accessFailedCount": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllExamReqDto": {
+        "type": "object",
+        "properties": {
+          "examId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "title": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "description": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "startDate": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "endDate": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "duration": {
+            "$ref": "#/components/schemas/DoubleFilterExpression"
+          },
+          "totalQuestions": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "totalMarks": {
+            "$ref": "#/components/schemas/DecimalFilterExpression"
+          },
+          "passingMarks": {
+            "$ref": "#/components/schemas/DecimalFilterExpression"
+          },
+          "isRandomized": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "isActive": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "createdOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "updatedOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllExamResultReqDto": {
+        "type": "object",
+        "properties": {
+          "examResultId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "userExamId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "totalObtainedMarks": {
+            "$ref": "#/components/schemas/DecimalFilterExpression"
+          },
+          "resultStatus": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "createdOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "updatedOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllOptionReqDto": {
+        "type": "object",
+        "properties": {
+          "optionId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "questionId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "optionText": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "isCorrect": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "marks": {
+            "$ref": "#/components/schemas/DecimalFilterExpression"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllQuestionReqDto": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "sectionId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "questionText": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "isMedia": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "mediaType": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "mediaURL": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "isMultipleChoice": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "isFromQuestionBank": {
+            "$ref": "#/components/schemas/BooleanFilterExpression"
+          },
+          "questionMaxMarks": {
+            "$ref": "#/components/schemas/DecimalFilterExpression"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "createdOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "updatedOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllSectionReqDto": {
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "examId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "title": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "totalQuestions": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "totalMarks": {
+            "$ref": "#/components/schemas/DecimalFilterExpression"
+          },
+          "passingMarks": {
+            "$ref": "#/components/schemas/DecimalFilterExpression"
+          },
+          "weightagePercentage": {
+            "$ref": "#/components/schemas/DecimalFilterExpression"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "createdOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "updatedOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllSectionResultReqDto": {
+        "type": "object",
+        "properties": {
+          "sectionResultId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "sectionId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "userExamId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "questionsAttempted": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "marksObtained": {
+            "$ref": "#/components/schemas/DecimalFilterExpression"
+          },
+          "resultStatus": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllUserAnswerReqDto": {
+        "type": "object",
+        "properties": {
+          "userAnswerId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "questionId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "userExamId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "sectionId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllUserExamReqDto": {
+        "type": "object",
+        "properties": {
+          "userExamId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "userId": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "examId": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "startedOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "finishedOn": {
+            "$ref": "#/components/schemas/DateTimeNullableFilterExpression"
+          },
+          "examStatus": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "totalMarks": {
+            "$ref": "#/components/schemas/DecimalNullableFilterExpression"
+          },
+          "isAutoSubmitted": {
+            "$ref": "#/components/schemas/BooleanNullableFilterExpression"
+          },
+          "noOfAttempt": {
+            "$ref": "#/components/schemas/Int32FilterExpression"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/StringFilterExpression"
+          },
+          "createdOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "updatedOn": {
+            "$ref": "#/components/schemas/DateTimeFilterExpression"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HttpStatusCode": {
+        "enum": [
+          100,
+          101,
+          102,
+          103,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          226,
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          400,
+          401,
+          402,
+          403,
+          404,
+          405,
+          406,
+          407,
+          408,
+          409,
+          410,
+          411,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417,
+          421,
+          422,
+          423,
+          424,
+          426,
+          428,
+          429,
+          431,
+          451,
+          500,
+          501,
+          502,
+          503,
+          504,
+          505,
+          506,
+          507,
+          508,
+          510,
+          511
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Int32FilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Int32FilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Int32FilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogicalOperator": {
+        "enum": [
+          "And",
+          "Or"
+        ],
+        "type": "string"
+      },
+      "LoginDto": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 1,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).+$",
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionResDetailDto": {
+        "type": "object",
+        "properties": {
+          "userAnswerOptionOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAnswerOptionResDto"
+            },
+            "nullable": true
+          },
+          "optionQuestionIdfk": {
+            "$ref": "#/components/schemas/QuestionResDto"
+          },
+          "optionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "optionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCorrect": {
+            "type": "boolean"
+          },
+          "marks": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionResDetailDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/OptionResDetailDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionResDto": {
+        "type": "object",
+        "properties": {
+          "optionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "optionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCorrect": {
+            "type": "boolean"
+          },
+          "marks": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionResDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OptionResDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionResDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/OptionResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PageDetails": {
+        "type": "object",
+        "properties": {
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasPreviousPage": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "hasNextPage": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
+          "pageNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sortBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "sortDescending": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuestionResDetailDto": {
+        "type": "object",
+        "properties": {
+          "optionQuestions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OptionResDto"
+            },
+            "nullable": true
+          },
+          "userAnswerQuestions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAnswerResDto"
+            },
+            "nullable": true
+          },
+          "questionSectionIdfk": {
+            "$ref": "#/components/schemas/SectionResDto"
+          },
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMedia": {
+            "type": "boolean"
+          },
+          "mediaType": {
+            "type": "string",
+            "nullable": true
+          },
+          "mediaURL": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMultipleChoice": {
+            "type": "boolean"
+          },
+          "isFromQuestionBank": {
+            "type": "boolean"
+          },
+          "questionMaxMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuestionResDetailDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/QuestionResDetailDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuestionResDto": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMedia": {
+            "type": "boolean"
+          },
+          "mediaType": {
+            "type": "string",
+            "nullable": true
+          },
+          "mediaURL": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMultipleChoice": {
+            "type": "boolean"
+          },
+          "isFromQuestionBank": {
+            "type": "boolean"
+          },
+          "questionMaxMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuestionResDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuestionResDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuestionResDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/QuestionResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterDto": {
+        "required": [
+          "email",
+          "firstname",
+          "lastname",
+          "mobileNo",
+          "password",
+          "role"
+        ],
+        "type": "object",
+        "properties": {
+          "firstname": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "lastname": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "password": {
+            "minLength": 1,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).+$",
+            "type": "string",
+            "format": "password"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "mobileNo": {
+            "maxLength": 10,
+            "minLength": 10,
+            "type": "string"
+          },
+          "role": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResponseMessage": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResDetailDto": {
+        "type": "object",
+        "properties": {
+          "questionSections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuestionResDto"
+            },
+            "nullable": true
+          },
+          "sectionResultSections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SectionResultResDto"
+            },
+            "nullable": true
+          },
+          "userAnswerSections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAnswerResDto"
+            },
+            "nullable": true
+          },
+          "sectionExamIdfk": {
+            "$ref": "#/components/schemas/ExamResDto"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "weightagePercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResDetailDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/SectionResDetailDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResDto": {
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "weightagePercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SectionResDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/SectionResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResultResDetailDto": {
+        "type": "object",
+        "properties": {
+          "sectionResultSectionIdfk": {
+            "$ref": "#/components/schemas/SectionResDto"
+          },
+          "sectionResultUserExamIdfk": {
+            "$ref": "#/components/schemas/UserExamResDto"
+          },
+          "sectionResultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionsAttempted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "marksObtained": {
+            "type": "number",
+            "format": "double"
+          },
+          "resultStatus": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResultResDetailDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/SectionResultResDetailDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResultResDto": {
+        "type": "object",
+        "properties": {
+          "sectionResultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionsAttempted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "marksObtained": {
+            "type": "number",
+            "format": "double"
+          },
+          "resultStatus": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResultResDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SectionResultResDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionResultResDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/SectionResultResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringFilterExpression": {
+        "type": "object",
+        "properties": {
+          "combineWith": {
+            "$ref": "#/components/schemas/LogicalOperator"
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringFilterOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringFilterOption": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "comparisonOperator": {
+            "$ref": "#/components/schemas/ComparisonOperator"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateApplicationUserReqDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean"
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean"
+          },
+          "twoFactorEnabled": {
+            "type": "boolean"
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean"
+          },
+          "accessFailedCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateExamReqDto": {
+        "type": "object",
+        "properties": {
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "duration": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "isRandomized": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateExamResultReqDto": {
+        "type": "object",
+        "properties": {
+          "examResultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalObtainedMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "resultStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateOptionReqDto": {
+        "type": "object",
+        "properties": {
+          "optionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "optionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCorrect": {
+            "type": "boolean"
+          },
+          "marks": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateQuestionReqDto": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMedia": {
+            "type": "boolean"
+          },
+          "mediaType": {
+            "type": "string",
+            "nullable": true
+          },
+          "mediaURL": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMultipleChoice": {
+            "type": "boolean"
+          },
+          "isFromQuestionBank": {
+            "type": "boolean"
+          },
+          "questionMaxMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateSectionReqDto": {
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "weightagePercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateSectionResultReqDto": {
+        "type": "object",
+        "properties": {
+          "sectionResultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionsAttempted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "marksObtained": {
+            "type": "number",
+            "format": "double"
+          },
+          "resultStatus": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateUserAnswerReqDto": {
+        "type": "object",
+        "properties": {
+          "userAnswerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateUserExamReqDto": {
+        "type": "object",
+        "properties": {
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finishedOn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "examStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isAutoSubmitted": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "noOfAttempt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserAnswerOptionResDto": {
+        "type": "object",
+        "properties": {
+          "userAnswerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "optionId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserAnswerResDetailDto": {
+        "type": "object",
+        "properties": {
+          "userAnswerOptionUserAnswers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAnswerOptionResDto"
+            },
+            "nullable": true
+          },
+          "userAnswerQuestionIdfk": {
+            "$ref": "#/components/schemas/QuestionResDto"
+          },
+          "userAnswerUserExamIdfk": {
+            "$ref": "#/components/schemas/UserExamResDto"
+          },
+          "userAnswerSectionIdfk": {
+            "$ref": "#/components/schemas/SectionResDto"
+          },
+          "userAnswerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserAnswerResDetailDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/UserAnswerResDetailDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserAnswerResDto": {
+        "type": "object",
+        "properties": {
+          "userAnswerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserAnswerResDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAnswerResDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserAnswerResDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/UserAnswerResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserExamResDetailDto": {
+        "type": "object",
+        "properties": {
+          "examResultUserExams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExamResultResDto"
+            },
+            "nullable": true
+          },
+          "sectionResultUserExams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SectionResultResDto"
+            },
+            "nullable": true
+          },
+          "userAnswerUserExams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAnswerResDto"
+            },
+            "nullable": true
+          },
+          "userExamUserIdfk": {
+            "$ref": "#/components/schemas/ApplicationUserResDto"
+          },
+          "userExamExamIdfk": {
+            "$ref": "#/components/schemas/ExamResDto"
+          },
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finishedOn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "examStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isAutoSubmitted": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "noOfAttempt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserExamResDetailDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/UserExamResDetailDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserExamResDto": {
+        "type": "object",
+        "properties": {
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finishedOn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "examStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isAutoSubmitted": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "noOfAttempt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserExamResDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserExamResDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserExamResDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/UserExamResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Please enter a valid token",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

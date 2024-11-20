@@ -1,0 +1,23 @@
+global using thinkschool.OnlineExam.Api;
+global using System.Net;
+global using thinkschool.OnlineExam.Services;
+global using Newtonsoft.Json;
+global using thinkschool.OnlineExam.Api.Middleware;
+global using thinkschool.OnlineExam.Api.Extensions;
+global using thinkschool.OnlineExam.Core.Common.Exceptions;
+global using thinkschool.OnlineExam.Core.Models.Base;
+global using System.Diagnostics;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
+global using thinkschool.OnlineExam.DataAccess.Persistence;
+global using thinkschool.OnlineExam.Api.Controllers.Base;
+global using System.Reflection;
+global using Microsoft.AspNetCore.ResponseCompression;
+global using thinkschool.OnlineExam.Core.Constants;
+global using thinkschool.OnlineExam.Core.Models;
+global using AutoMapper;
+global using Newtonsoft.Json.Converters;
+global using Asp.Versioning;
+global using thinkschool.OnlineExam.Services.IServices;
+global using thinkschool.OnlineExam.Core.Entities;
+
