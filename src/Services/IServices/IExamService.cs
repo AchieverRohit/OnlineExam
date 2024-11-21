@@ -11,4 +11,6 @@ public interface IExamService
     /// <param name = "cancellationToken">Token to cancel the asynchronous operation.</param>
     /// <returns>A ListResponse containing a list of ExamDto objects.</returns>
     Task<ListResponse<ExamDto>> GetActiveExams(CancellationToken cancellationToken);
+    Task<ListResponse<ExamDto>> GetExamsByTeacherId(string teacherId, CancellationToken cancellationToken);
+
 }

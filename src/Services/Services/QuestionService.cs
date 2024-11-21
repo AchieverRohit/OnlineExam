@@ -1,4 +1,6 @@
 
+using thinkschool.OnlineExam.Core.Validations;
+
 namespace thinkschool.OnlineExam.Services.Services;
 public class QuestionService : IQuestionService
 {
@@ -62,7 +64,61 @@ public class QuestionService : IQuestionService
         await _dbContext.SaveChangesAsync(); // Saves changes to the database
         return new BaseResponse(); // Returns a base response
      }
-       
+
+
+    /// <summary>
+    /// Adds a new question with options to the database.
+    /// </summary>
+    /// <param name="questionDto">The question DTO containing the details of the question and options.</param>
+    /// <param name="cancellationToken">Cancellation token for async operations.</param>
+    /// <returns>Returns a SingleResponse containing the added QuestionDto.</returns>
+    /// <exception cref="ValidationException">Thrown when validation of the QuestionDto fails.</exception>
+    public async Task<SingleResponse<QuestionDto>> AddQuestionWithOptions(QuestionDto questionDto, CancellationToken cancellationToken)
+    {
+        if (questionDto == null) throw new ArgumentNullException(nameof(questionDto));
+
+        var validator = new QuestionDtoValidator();
+        var validationResult = validator.Validate(questionDto);
+
+        if (!validationResult.IsValid)
+        {
+            return new SingleResponse<QuestionDto>
+            {
+                Status = HttpStatusCode.BadRequest,
+                Messages = validationResult.Errors.Select(e => new ResponseMessage { Message = e.ErrorMessage }).ToList()
+            };
+        }
+
+        try
+        {
+            var question = _mapper.Map<Question>(questionDto);
+            _dbContext.Questions.Add(question);
+
+            foreach (var optionDto in questionDto.Options)
+            {
+                var option = _mapper.Map<Option>(optionDto);
+                option.QuestionId = question.QuestionId;
+                _dbContext.Options.Add(option);
+            }
+
+            await _dbContext.SaveChangesAsync(cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            // Log the exception (logging mechanism not shown here)
+            return new SingleResponse<QuestionDto>
+            {
+                Status = HttpStatusCode.InternalServerError,
+                Messages = new List<ResponseMessage> { new ResponseMessage { Message = ex.Message } }
+            };
+        }
+
+        return new SingleResponse<QuestionDto>
+        {
+            Data = questionDto,
+            Status = HttpStatusCode.Created
+        };
+    }
 }
 
 

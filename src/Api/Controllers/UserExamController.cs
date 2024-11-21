@@ -76,6 +76,32 @@ namespace thinkschool.OnlineExam.Api.Controllers
            return HandleResult(result);
         }
 
+        /// <summary>
+        /// API endpoint to get user exams and their results for a specific exam ID.
+        /// </summary>
+        /// <param name="examId">The ID of the exam.</param>
+        /// <param name="cancellationToken">Cancellation token for async operation.</param>
+        /// <returns>Returns a list of user exams with results.</returns>
+        [HttpGet("GetUserExamsByExamId")]
+        public async Task<ActionResult<ListResponse<UserExamWithResultDto>>> GetUserExamsByExamId(int examId, CancellationToken cancellationToken)
+        {
+            if (examId <= 0)
+            {
+                return BadRequest("Invalid exam Id");
+            }
+
+            try
+            {
+                var result = await _servicesCollection.UserExamServices.GetUserExamsByExamId(examId, cancellationToken);
+                return HandleResult(result);
+            }
+            catch (Exception ex)
+            {
+                // Log exception
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while processing your request.");
+            }
+        }
+
     }
 }
 

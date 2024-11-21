@@ -62,7 +62,53 @@ public class UserExamService : IUserExamService
         await _dbContext.SaveChangesAsync(); // Saves changes to the database
         return new BaseResponse(); // Returns a base response
      }
-       
+
+    /// <summary>
+    /// Retrieves a list of user exams and their associated results by exam ID.
+    /// </summary>
+    /// <param name="examId">The ID of the exam for which user exams are to be retrieved.</param>
+    /// <param name="cancellationToken">Cancellation token for async operation.</param>
+    /// <returns>A list of user exams along with their results.</returns>
+    /// <exception cref="ArgumentException">Thrown when examId is less than or equal to zero.</exception>
+    public async Task<ListResponse<UserExamWithResultDto>> GetUserExamsByExamId(int examId, CancellationToken cancellationToken)
+    {
+        if (examId <= 0) throw new ArgumentException("Invalid exam Id", nameof(examId));
+
+        var userExams = await _dbContext.UserExams
+            .Where(ue => ue.ExamId == examId)
+            .GroupJoin(_dbContext.ExamResults,
+                      ue => ue.UserExamId,
+                      er => er.UserExamId,
+                      (ue, userExamResults) => new { ue, userExamResults })
+            .SelectMany(temp => temp.userExamResults.DefaultIfEmpty(),
+                        (temp, examResult) => new UserExamWithResultDto
+                        {
+                            UserExamId = temp.ue.UserExamId,
+                            UserId = temp.ue.UserId,
+                            ExamId = temp.ue.ExamId,
+                            StartedOn = temp.ue.StartedOn,
+                            FinishedOn = temp.ue.FinishedOn,
+                            ExamStatus = temp.ue.ExamStatus,
+                            TotalMarks = temp.ue.TotalMarks,
+                            IsAutoSubmitted = temp.ue.IsAutoSubmitted,
+                            NoOfAttempt = temp.ue.NoOfAttempt,
+                            CreatedBy = temp.ue.CreatedBy,
+                            CreatedOn = temp.ue.CreatedOn,
+                            UpdatedOn = temp.ue.UpdatedOn,
+                            ExamResult = examResult == null ? null : new ExamResultDto
+                            {
+                                ExamResultId = examResult.ExamResultId,
+                                TotalObtainedMarks = examResult.TotalObtainedMarks,
+                                ResultStatus = examResult.ResultStatus,
+                                CreatedBy = examResult.CreatedBy,
+                                CreatedOn = examResult.CreatedOn,
+                                UpdatedOn = examResult.UpdatedOn
+                            }
+                        }).ToListAsync(cancellationToken);
+
+        return new ListResponse<UserExamWithResultDto> { Data = userExams };
+    }
+
 }
 
 

@@ -40,6 +40,31 @@ namespace thinkschool.OnlineExam.Core.Models
         public virtual ExamResDto? UserExamExamIdfk { get; set; }
    }
 
+    public class UserExamWithResultDto
+    {
+        public int UserExamId { get; set; }
+        public string UserId { get; set; }
+        public int ExamId { get; set; }
+        public DateTime StartedOn { get; set; }
+        public DateTime? FinishedOn { get; set; }
+        public string ExamStatus { get; set; }
+        public decimal? TotalMarks { get; set; }
+        public bool? IsAutoSubmitted { get; set; }
+        public int NoOfAttempt { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
+        public ExamResultDto ExamResult { get; set; }
+    }
 
+    public class ExamResultDto
+    {
+        public int ExamResultId { get; set; }
+        public decimal TotalObtainedMarks { get; set; }
+        public string ResultStatus { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
+    }
 }
 

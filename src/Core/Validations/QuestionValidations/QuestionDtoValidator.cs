@@ -50,6 +50,41 @@ namespace thinkschool.OnlineExam.Core.Validations
             RuleFor(x => x.UpdatedOn).NotNull().WithMessage("UpdatedOn is required.");
         }
     }
+
+    public class QuestionDtoValidator : AbstractValidator<QuestionDto>
+    {
+        public QuestionDtoValidator()
+        {
+            RuleFor(x => x.QuestionText)
+                .NotEmpty().WithMessage("Question text is required.")
+                .MaximumLength(255).WithMessage("Question text cannot exceed 255 characters.");
+
+            RuleFor(x => x.MediaType)
+                .MaximumLength(255).WithMessage("Media type cannot exceed 255 characters.");
+
+            RuleFor(x => x.MediaURL)
+                .MaximumLength(255).WithMessage("Media URL cannot exceed 255 characters.");
+
+            RuleFor(x => x.CreatedBy)
+                .NotEmpty().WithMessage("Created by is required.")
+                .MaximumLength(255).WithMessage("Created by cannot exceed 255 characters.");
+
+            RuleForEach(x => x.Options).SetValidator(new OptionDtoValidator());
+        }
+    }
+
+    public class OptionDtoValidator : AbstractValidator<OptionDto>
+    {
+        public OptionDtoValidator()
+        {
+            RuleFor(x => x.OptionText)
+                .NotEmpty().WithMessage("Option text is required.")
+                .MaximumLength(255).WithMessage("Option text cannot exceed 255 characters.");
+
+            RuleFor(x => x.Marks)
+                .GreaterThanOrEqualTo(0).WithMessage("Marks must be greater than or equal to 0.");
+        }
+    }
 }
 
 

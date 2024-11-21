@@ -8,7 +8,9 @@ public interface IQuestionService
     Task<SingleResponse<QuestionResDto>> Update(UpdateQuestionReqDto requestDto);
     Task<SingleResponse<dynamic>> GetById(int  QuestionId, bool withDetails = false);
     Task<BaseResponse> Delete(int  QuestionId);
-  
+    Task<SingleResponse<QuestionDto>> AddQuestionWithOptions(QuestionDto questionDto, CancellationToken cancellationToken);
+
+
 }
 
 

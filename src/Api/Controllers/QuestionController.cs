@@ -1,4 +1,6 @@
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace thinkschool.OnlineExam.Api.Controllers
 {
     public class QuestionController : BaseController
@@ -43,6 +45,7 @@ namespace thinkschool.OnlineExam.Api.Controllers
         /// <param name="requestDto">Request DTO for adding a Question.</param>
         /// <returns>Added Question details.</returns>
         [HttpPost("AddQuestion")]
+        [Authorize(Roles = "Teacher")]
         public async Task<ActionResult<SingleResponse<QuestionResDto>>> AddQuestion(AddQuestionReqDto requestDto)
         {
             var result = await _servicesCollection.QuestionServices.Save(requestDto);
@@ -74,6 +77,21 @@ namespace thinkschool.OnlineExam.Api.Controllers
         {
            var result = await _servicesCollection.QuestionServices.Delete(QuestionId);
            return HandleResult(result);
+        }
+
+        /// <summary>
+        /// API endpoint to add a question with options.
+        /// </summary>
+        /// <param name="questionDto">The question DTO from the request body.</param>
+        /// <param name="cancellationToken">Cancellation token for async operations.</param>
+        /// <returns>ActionResult containing the response.</returns>
+        [HttpPost("AddQuestionWithOptions")]
+        public async Task<ActionResult<SingleResponse<QuestionDto>>> AddQuestionWithOptions([FromBody] QuestionDto questionDto, CancellationToken cancellationToken)
+        {
+            if (questionDto == null) return BadRequest("QuestionDto cannot be null.");
+
+            var result = await _servicesCollection.QuestionServices.AddQuestionWithOptions(questionDto, cancellationToken);
+            return HandleResult(result);
         }
 
     }

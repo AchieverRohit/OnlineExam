@@ -61,5 +61,25 @@ namespace thinkschool.OnlineExam.Core.Models
         public int QuestionId { get; set; }
     }
 
+    public class QuestionDto
+    {
+        public int SectionId { get; set; }
+        public string QuestionText { get; set; }
+        public bool IsMedia { get; set; }
+        public string MediaType { get; set; }
+        public string MediaURL { get; set; }
+        public bool IsMultipleChoice { get; set; }
+        public bool IsFromQuestionBank { get; set; }
+        public decimal QuestionMaxMarks { get; set; }
+        public string CreatedBy { get; set; }
+        public List<OptionDto> Options { get; set; } = new List<OptionDto>();
+    }
+
+    public class OptionDto
+    {
+        public string OptionText { get; set; }
+        public bool IsCorrect { get; set; }
+        public decimal Marks { get; set; }
+    }
 }
 

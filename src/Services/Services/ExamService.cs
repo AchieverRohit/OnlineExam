@@ -92,4 +92,42 @@ public class ExamService : IExamService
             throw new Exception("An error occurred while retrieving active exams.", ex);
         }
     }
+
+    /// <summary>
+    /// Retrieves exams created by a specific teacher.
+    /// </summary>
+    /// <param name="teacherId">The ID of the teacher whose exams are to be retrieved.</param>
+    /// <param name="cancellationToken">The cancellation token for task cancellation.</param>
+    /// <returns>A list response containing exam DTOs.</returns>
+    /// <exception cref="ArgumentNullException">Thrown when teacherId is null or empty.</exception>
+    public async Task<ListResponse<ExamDto>> GetExamsByTeacherId(string teacherId, CancellationToken cancellationToken)
+    {
+        if (string.IsNullOrWhiteSpace(teacherId))
+        {
+            throw new ArgumentNullException(nameof(teacherId), "Teacher ID cannot be null or empty.");
+        }
+
+        var exams = await _dbContext.Exams
+            .Where(e => e.CreatedBy == teacherId)
+            .Select(e => new ExamDto
+            {
+                ExamId = e.ExamId,
+                Title = e.Title,
+                Description = e.Description,
+                StartDate = e.StartDate,
+                EndDate = e.EndDate,
+                Duration = e.Duration,
+                TotalQuestions = e.TotalQuestions,
+                TotalMarks = e.TotalMarks,
+                PassingMarks = e.PassingMarks,
+                IsRandomized = e.IsRandomized,
+                IsActive = e.IsActive,
+                CreatedBy = e.CreatedBy,
+                CreatedOn = e.CreatedOn,
+                UpdatedOn = e.UpdatedOn
+            })
+            .ToListAsync(cancellationToken);
+
+        return new ListResponse<ExamDto> { Data = exams };
+    }
 }

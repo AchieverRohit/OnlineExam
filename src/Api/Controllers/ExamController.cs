@@ -55,6 +55,7 @@ namespace thinkschool.OnlineExam.Api.Controllers
         /// <param name = "requestDto">Request DTO for updating a Exam.</param>
         /// <returns>Updated Exam details.</returns>
         [HttpPost("UpdateExam")]
+        [Authorize(Roles = "Teacher")]
         public async Task<ActionResult<SingleResponse<ExamResDto>>> UpdateExam(UpdateExamReqDto requestDto)
         {
             var result = await _servicesCollection.ExamServices.Update(requestDto);
@@ -96,6 +97,33 @@ namespace thinkschool.OnlineExam.Api.Controllers
             {
                 // Log exception
                 return StatusCode(500, "Internal server error.");
+            }
+        }
+
+        /// <summary>
+        /// API endpoint to retrieve exams by teacher ID.
+        /// </summary>
+        /// <param name="teacherId">The ID of the teacher whose exams are to be retrieved.</param>
+        /// <param name="cancellationToken">The cancellation token for task cancellation.</param>
+        /// <returns>An action result containing a list response of exam DTOs.</returns>
+        [HttpGet("GetExamsByTeacherId")]
+        [Authorize(Roles = "Teacher")]
+        public async Task<ActionResult<ListResponse<ExamDto>>> GetExamsByTeacherId(string teacherId, CancellationToken cancellationToken)
+        {
+            if (string.IsNullOrWhiteSpace(teacherId))
+            {
+                return BadRequest("Teacher ID cannot be null or empty.");
+            }
+
+            try
+            {
+                var result = await _examService.GetExamsByTeacherId(teacherId, cancellationToken);
+                return HandleResult(result);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception as needed
+                return StatusCode(500, "An error occurred while retrieving exams.");
             }
         }
     }

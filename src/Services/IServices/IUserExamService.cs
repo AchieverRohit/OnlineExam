@@ -8,7 +8,9 @@ public interface IUserExamService
     Task<SingleResponse<UserExamResDto>> Update(UpdateUserExamReqDto requestDto);
     Task<SingleResponse<dynamic>> GetById(int  UserExamId, bool withDetails = false);
     Task<BaseResponse> Delete(int  UserExamId);
-  
+    Task<ListResponse<UserExamWithResultDto>> GetUserExamsByExamId(int examId, CancellationToken cancellationToken);
+
+
 }
 
 
