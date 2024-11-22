@@ -8,7 +8,9 @@ public interface ISectionService
     Task<SingleResponse<SectionResDto>> Update(UpdateSectionReqDto requestDto);
     Task<SingleResponse<dynamic>> GetById(int  SectionId, bool withDetails = false);
     Task<BaseResponse> Delete(int  SectionId);
-  
+
+    Task<ListResponse<SectionResDto>> GetSectionsByExamId(int examId, CancellationToken cancellationToken);
+
 }
 
 

@@ -78,22 +78,22 @@ public class ExamService : IExamService
     /// <param name = "cancellationToken">Token to cancel the asynchronous operation.</param>
     /// <returns>A ListResponse containing a list of ExamDto objects.</returns>
     /// <exception cref = "Exception">Thrown when an error occurs in database access.</exception>
-    public async Task<ListResponse<ExamDto>> GetActiveExams(CancellationToken cancellationToken)
-    {
-        try
-        {
-            var activeExams = await _dbContext.Exams.Where(e => e.IsActive).Select(e => new ExamDto { ExamId = e.ExamId, Title = e.Title, Description = e.Description, StartDate = e.StartDate, EndDate = e.EndDate, Duration = e.Duration, TotalQuestions = e.TotalQuestions, TotalMarks = e.TotalMarks, PassingMarks = e.PassingMarks, IsRandomized = e.IsRandomized, IsActive = e.IsActive, CreatedBy = e.CreatedBy, CreatedOn = e.CreatedOn, UpdatedOn = e.UpdatedOn }).ToListAsync(cancellationToken);
-            return new ListResponse<ExamDto>
-            {
-                Data = activeExams
-            };
-        }
-        catch (Exception ex)
-        {
-            // Log exception
-            throw new Exception("An error occurred while retrieving active exams.", ex);
-        }
-    }
+    //public async Task<ListResponse<ExamDto>> GetActiveExams(CancellationToken cancellationToken)
+    //{
+    //    try
+    //    {
+    //        var activeExams = await _dbContext.Exams.Where(e => e.IsActive).Select(e => new ExamDto { ExamId = e.ExamId, Title = e.Title, Description = e.Description, StartDate = e.StartDate, EndDate = e.EndDate, Duration = e.Duration, TotalQuestions = e.TotalQuestions, TotalMarks = e.TotalMarks, PassingMarks = e.PassingMarks, IsRandomized = e.IsRandomized, IsActive = e.IsActive, CreatedBy = e.CreatedBy, CreatedOn = e.CreatedOn, UpdatedOn = e.UpdatedOn }).ToListAsync(cancellationToken);
+    //        return new ListResponse<ExamDto>
+    //        {
+    //            Data = activeExams
+    //        };
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        // Log exception
+    //        throw new Exception("An error occurred while retrieving active exams.", ex);
+    //    }
+    //}
 
     /// <summary>
     /// Retrieves exams created by a specific teacher.
@@ -200,4 +200,151 @@ public class ExamService : IExamService
             Status = HttpStatusCode.OK
         };
     }
+
+    /// <summary>
+
+    /// Retrieves all active exams.
+
+    /// </summary>
+
+    /// <param name="cancellationToken">Cancellation token to cancel the operation.</param>
+
+    /// <returns>A list response with active exams.</returns>
+
+    public async Task<ListResponse<ExamResDto>> GetActiveExams(CancellationToken cancellationToken)
+
+    {
+
+        if (cancellationToken == null) throw new ArgumentNullException(nameof(cancellationToken));
+
+        try
+
+        {
+
+            var activeExams = await _dbContext.Exams
+
+                .Where(e => e.IsActive == true)
+
+                .AsNoTracking()
+
+                .ToListAsync(cancellationToken);
+
+            var mappedResponse = _mapper.Map<List<ExamResDto>>(activeExams);
+
+            return new ListResponse<ExamResDto> { Data = mappedResponse };
+
+        }
+
+        catch (Exception ex)
+
+        {
+
+            // Log the exception
+
+            // logger.LogError(ex, "Error occurred while retrieving active exams.");
+
+            throw;
+
+        }
+
+    }
+
+    /// <summary>
+
+    /// Retrieves exam details by examId, including sections, questions and options.
+
+    /// </summary>
+
+    /// <param name="examId">The ID of the exam to retrieve.</param>
+
+    /// <param name="cancellationToken">Cancellation token to cancel the operation.</param>
+
+    /// <returns>A SingleResponse containing the exam details or an error message if not found.</returns>
+
+    /// <exception cref="ArgumentException">Thrown when examId is less than or equal to zero.</exception>
+
+    public async Task<SingleResponse<ExamDetailsResponseDto>> GetExamWithDetails(int examId, CancellationToken cancellationToken)
+
+    {
+
+        if (examId <= 0)
+
+            throw new ArgumentException("Exam ID must be greater than zero.", nameof(examId));
+
+        var examData = await _dbContext.Exams
+
+        .Where(e => e.ExamId == examId)
+
+        .Include(e => e.SectionExams.Where(s => s.ExamId == examId))
+
+            .ThenInclude(s => s.QuestionSections)
+
+                .ThenInclude(q => q.OptionQuestions)
+
+        .FirstOrDefaultAsync();
+
+        //var examData = await _dbContext.Exams
+
+        //    .Where(e => e.ExamId == examId)
+
+        //    .Select(e => new
+
+        //    {
+
+        //        Exam = e,
+
+        //        Sections = _dbContext.Sections
+
+        //            .Where(s => s.ExamId == e.ExamId)
+
+        //            .Select(s => new
+
+        //            {
+
+        //                Section = s,
+
+        //                Questions = _dbContext.Questions
+
+        //                    .Where(q => q.SectionId == s.SectionId)
+
+        //                    .Select(q => new
+
+        //                    {
+
+        //                        Question = q,
+
+        //                        Options = _dbContext.Options
+
+        //                            .Where(o => o.QuestionId == q.QuestionId)
+
+        //                            .ToList()
+
+        //                    }).ToList()
+
+        //            }).ToList()
+
+        //    }).FirstOrDefaultAsync(cancellationToken);
+
+        if (examData == null)
+
+        {
+
+            return new SingleResponse<ExamDetailsResponseDto>
+
+            {
+
+                Status = HttpStatusCode.NotFound,
+
+                Messages = new List<ResponseMessage> { new ResponseMessage { Message = "Exam not found." } }
+
+            };
+
+        }
+
+        var mappedResponse = _mapper.Map<ExamDetailsResponseDto>(examData);
+
+        return new SingleResponse<ExamDetailsResponseDto> { Data = mappedResponse };
+
+    }
+
 }

@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\api\\controllers\\sectioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\sectioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\iservices\\isectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\iservices\\isectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\services\\sectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\services\\sectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\core\\models\\sectiondtos\\sectionresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\models\\sectiondtos\\sectionresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SectionController.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Api\\Controllers\\SectionController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Controllers\\SectionController.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Api\\Controllers\\SectionController.cs",
+              "RelativeToolTip": "src\\Api\\Controllers\\SectionController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:41:47.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SectionResDto.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\Models\\SectionDtos\\SectionResDto.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Models\\SectionDtos\\SectionResDto.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\Models\\SectionDtos\\SectionResDto.cs",
+              "RelativeToolTip": "src\\Core\\Models\\SectionDtos\\SectionResDto.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvyQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:41:00.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SectionService.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\Services\\SectionService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Services\\SectionService.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\Services\\SectionService.cs",
+              "RelativeToolTip": "src\\Services\\Services\\SectionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:40:41.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ISectionService.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\IServices\\ISectionService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\IServices\\ISectionService.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\IServices\\ISectionService.cs",
+              "RelativeToolTip": "src\\Services\\IServices\\ISectionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:40:16.444Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

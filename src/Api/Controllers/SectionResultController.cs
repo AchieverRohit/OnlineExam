@@ -76,6 +76,30 @@ namespace thinkschool.OnlineExam.Api.Controllers
            return HandleResult(result);
         }
 
+        /// <summary>
+        /// Endpoint to generate section results.
+        /// </summary>
+        /// <param name="sectionId">The ID of the section.</param>
+        /// <param name="userExamId">The ID of the user's exam attempt.</param>
+        /// <param name="cancellationToken">A token to cancel the operation.</param>
+        /// <returns>HTTP response with the section result data.</returns>
+        [HttpPost("GenerateSectionResult")]
+        public async Task<ActionResult<SingleResponse<SectionResultResDto>>> GenerateSectionResult(int sectionId, int userExamId, CancellationToken cancellationToken)
+        {
+            try
+            {
+                if (sectionId <= 0 || userExamId <= 0)
+                    return BadRequest("Invalid sectionId or userExamId.");
+
+                var result = await _servicesCollection.SectionResultServices.GenerateSectionResult(sectionId, userExamId, cancellationToken);
+                return HandleResult(result);
+            }
+            catch (Exception ex)
+            {
+                // Log exception if needed
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while processing your request.");
+            }
+        }
     }
 }
 

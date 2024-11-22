@@ -62,7 +62,85 @@ public class SectionResultService : ISectionResultService
         await _dbContext.SaveChangesAsync(); // Saves changes to the database
         return new BaseResponse(); // Returns a base response
      }
-       
+
+    /// <summary>
+    /// Generates a result for a section of an exam.
+    /// </summary>
+    /// <param name="sectionId">The ID of the section.</param>
+    /// <param name="userExamId">The ID of the user's exam attempt.</param>
+    /// <param name="cancellationToken">A token to cancel the operation.</param>
+    /// <returns>A response with the generated section result.</returns>
+    public async Task<SingleResponse<SectionResultResDto>> GenerateSectionResult(int sectionId, int userExamId, CancellationToken cancellationToken)
+    {
+        if (sectionId <= 0 || userExamId <= 0)
+            throw new ArgumentException("Invalid sectionId or userExamId.");
+
+        var section = await _dbContext.Sections.FirstOrDefaultAsync(s => s.SectionId == sectionId, cancellationToken);
+
+        if (section == null)
+        {
+            return new SingleResponse<SectionResultResDto>
+            {
+                Status = HttpStatusCode.NotFound,
+                Messages = new List<ResponseMessage> { new ResponseMessage { Message = "Section not found." } }
+            };
+        }
+
+        var userAnswers = await (from ua in _dbContext.UserAnswers
+                                 join uao in _dbContext.UserAnswerOptions on ua.UserAnswerId equals uao.UserAnswerId
+                                 join o in _dbContext.Options on uao.OptionId equals o.OptionId
+                                 where ua.SectionId == sectionId && ua.UserExamId == userExamId && o.IsCorrect
+                                 select ua).Distinct().ToListAsync(cancellationToken);
+
+        var attemptedQuestionsCount = await (from ua in _dbContext.UserAnswers
+                                             join uao in _dbContext.UserAnswerOptions on ua.UserAnswerId equals uao.UserAnswerId
+                                             where ua.SectionId == sectionId && ua.UserExamId == userExamId
+                                             select ua.QuestionId)
+                                     .Distinct()
+                                     .CountAsync(cancellationToken);
+
+
+        if (!userAnswers.Any())
+        {
+            return new SingleResponse<SectionResultResDto>
+            {
+                Status = HttpStatusCode.NotFound,
+                Messages = new List<ResponseMessage> { new ResponseMessage { Message = "No correct answers found for this section." } }
+            };
+        }
+
+        decimal marksObtained = userAnswers.Sum(ua => (from uao in _dbContext.UserAnswerOptions
+                                                       join o in _dbContext.Options on uao.OptionId equals o.OptionId
+                                                       where uao.UserAnswerId == ua.UserAnswerId && o.IsCorrect
+                                                       select (decimal?)o.Marks).FirstOrDefault() ?? 0);
+
+        var sectionResult = new SectionResult
+        {
+            SectionId = sectionId,
+            UserExamId = userExamId,
+            QuestionsAttempted = attemptedQuestionsCount,
+            MarksObtained = marksObtained,
+            ResultStatus = marksObtained >= section.PassingMarks ? "Pass" : "Fail"
+        };
+
+        _dbContext.SectionResults.Add(sectionResult);
+        await _dbContext.SaveChangesAsync(cancellationToken);
+
+        var sectionResultDto = new SectionResultResDto
+        {
+            SectionId = sectionResult.SectionId,
+            UserExamId = sectionResult.UserExamId,
+            QuestionsAttempted = sectionResult.QuestionsAttempted,
+            MarksObtained = sectionResult.MarksObtained,
+            ResultStatus = sectionResult.ResultStatus
+        };
+
+        return new SingleResponse<SectionResultResDto>
+        {
+            Data = sectionResultDto,
+            Status = HttpStatusCode.Created
+        };
+    }
 }
 
 

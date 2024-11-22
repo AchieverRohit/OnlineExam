@@ -871,6 +871,32 @@
   },
   {
     "ContainingType": "thinkschool.OnlineExam.Api.Controllers.SectionController",
+    "Method": "GetSectionsByExamId",
+    "RelativePath": "api/v1/Section/GetSectionsByExamId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "examId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "thinkschool.OnlineExam.Core.Models.Base.ListResponse\u00601[[thinkschool.OnlineExam.Core.Models.SectionResDto, thinkschool.OnlineExam.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "thinkschool.OnlineExam.Api.Controllers.SectionController",
     "Method": "UpdateSection",
     "RelativePath": "api/v1/Section/UpdateSection",
     "HttpMethod": "POST",
@@ -936,6 +962,37 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "thinkschool.OnlineExam.Api.Controllers.SectionResultController",
+    "Method": "GenerateSectionResult",
+    "RelativePath": "api/v1/SectionResult/GenerateSectionResult",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sectionId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "userExamId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "thinkschool.OnlineExam.Core.Models.Base.SingleResponse\u00601[[thinkschool.OnlineExam.Core.Models.SectionResultResDto, thinkschool.OnlineExam.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "thinkschool.OnlineExam.Api.Controllers.SectionResultController",

@@ -62,7 +62,46 @@ public class SectionService : ISectionService
         await _dbContext.SaveChangesAsync(); // Saves changes to the database
         return new BaseResponse(); // Returns a base response
      }
-       
+
+    /// <summary>
+    /// Retrieves a list of SectionDto objects by ExamId.
+    /// </summary>
+    /// <param name="examId">The exam identification number.</param>
+    /// <param name="cancellationToken">Token to cancel operation.</param>
+    /// <returns>A task that represents the asynchronous operation. The task result contains a ListResponse of SectionDto.</returns>
+    /// <exception cref="ArgumentException">Thrown when examId is less than or equal to zero.</exception>
+    public async Task<ListResponse<SectionResDto>> GetSectionsByExamId(int examId, CancellationToken cancellationToken)
+    {
+        if (examId <= 0)
+        {
+            throw new ArgumentException("ExamId must be greater than zero.", nameof(examId));
+        }
+
+        try
+        {
+            var sections = await _dbContext.Sections
+                .Where(s => s.ExamId == examId)
+                .Select(s => new SectionResDto
+                {
+                    SectionId = s.SectionId,
+                    Title = s.Title,
+                    TotalQuestions = s.TotalQuestions,
+                    TotalMarks = s.TotalMarks,
+                    PassingMarks = s.PassingMarks,
+                    WeightagePercentage = s.WeightagePercentage,
+                    CreatedBy = s.CreatedBy,
+                    CreatedOn = s.CreatedOn,
+                    UpdatedOn = s.UpdatedOn
+                }).ToListAsync(cancellationToken);
+
+            return new ListResponse<SectionResDto> { Data = sections };
+        }
+        catch (Exception ex)
+        {
+            // Log exception here or handle accordingly
+            throw new ApplicationException("An error occurred while retrieving sections.", ex);
+        }
+    }
 }
 
 

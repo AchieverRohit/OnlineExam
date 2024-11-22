@@ -79,6 +79,31 @@ namespace thinkschool.OnlineExam.Api.Controllers
            return HandleResult(result);
         }
 
+        /// <summary>
+        /// API endpoint to get sections by exam ID.
+        /// </summary>
+        /// <param name="examId">The ID of the exam for which to retrieve sections.</param>
+        /// <param name="cancellationToken">Token to cancel operation.</param>
+        /// <returns>An ActionResult containing a list of sections.</returns>
+        [HttpGet("GetSectionsByExamId")]
+        public async Task<ActionResult<ListResponse<SectionResDto>>> GetSectionsByExamId(int examId, CancellationToken cancellationToken)
+        {
+            if (examId <= 0)
+            {
+                return BadRequest("ExamId must be greater than zero.");
+            }
+
+            try
+            {
+                var result = await _servicesCollection.SectionServices.GetSectionsByExamId(examId, cancellationToken);
+                return HandleResult(result);
+            }
+            catch (Exception ex)
+            {
+                // Log exception here or handle accordingly
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
+        }
     }
 }
 
