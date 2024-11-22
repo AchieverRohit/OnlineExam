@@ -13,4 +13,6 @@ public interface IExamService
     Task<ListResponse<ExamDto>> GetActiveExams(CancellationToken cancellationToken);
     Task<ListResponse<ExamDto>> GetExamsByTeacherId(string teacherId, CancellationToken cancellationToken);
 
+    Task<SingleResponse<ExamDto>> UpdateExam(ExamDto examDto, CancellationToken cancellationToken);
+
 }

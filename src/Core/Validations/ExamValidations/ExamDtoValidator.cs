@@ -52,6 +52,30 @@ namespace thinkschool.OnlineExam.Core.Validations
             RuleFor(x => x.UpdatedOn).NotNull().WithMessage("UpdatedOn is required.");
         }
     }
+
+    public class ExamDtoValidator : AbstractValidator<ExamDto>
+    {
+        public ExamDtoValidator()
+        {
+            RuleFor(x => x.Title)
+                .NotEmpty().WithMessage("Title is required.")
+                .MaximumLength(255).WithMessage("Title cannot exceed 255 characters.");
+
+            RuleFor(x => x.Description)
+                .NotEmpty().WithMessage("Description is required.")
+                .MaximumLength(255).WithMessage("Description cannot exceed 255 characters.");
+
+            RuleFor(x => x.StartDate)
+                .Must((dto, startDate) => startDate < dto.EndDate).WithMessage("Start date must be before the end date.");
+
+            RuleFor(x => x.TotalMarks)
+                .GreaterThan(0).WithMessage("Total marks must be greater than zero.");
+
+            RuleFor(x => x.PassingMarks)
+                .GreaterThan(0).WithMessage("Passing marks must be greater than zero.")
+                .LessThanOrEqualTo(x => x.TotalMarks).WithMessage("Passing marks must be less than or equal to total marks.");
+        }
+    }
 }
 
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xvLRTXrRKc4=",
+  "dgSpecHash": "jiXXQItrtik=",
   "success": true,
-  "projectFilePath": "E:\\ThinkSchool\\Thinkcode\\OnlineExam1\\OnlineExam1\\src\\Api\\thinkschool.OnlineExam.Api.csproj",
+  "projectFilePath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Api\\thinkschool.OnlineExam.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\A\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",

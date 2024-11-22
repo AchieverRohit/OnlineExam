@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\services\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\services\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\iservices\\iexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\iservices\\iexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExamService.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\Services\\ExamService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Services\\ExamService.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\Services\\ExamService.cs",
+              "RelativeToolTip": "src\\Services\\Services\\ExamService.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAALcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T05:28:41.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IExamService.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\IServices\\IExamService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\IServices\\IExamService.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\IServices\\IExamService.cs",
+              "RelativeToolTip": "src\\Services\\IServices\\IExamService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T05:28:37.835Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

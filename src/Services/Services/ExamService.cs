@@ -1,3 +1,5 @@
+using thinkschool.OnlineExam.Core.Validations;
+
 public class ExamService : IExamService
 {
     private readonly IBaseRepository _baseRepository; // Base repository for database operations
@@ -129,5 +131,73 @@ public class ExamService : IExamService
             .ToListAsync(cancellationToken);
 
         return new ListResponse<ExamDto> { Data = exams };
+    }
+
+    /// <summary>
+    /// Updates an existing exam in the database.
+    /// </summary>
+    /// <param name="examDto">The exam data transfer object containing updated exam details.</param>
+    /// <param name="cancellationToken">Cancellation token to cancel the request.</param>
+    /// <returns>A Task that represents the asynchronous operation, containing a SingleResponse with the updated ExamDto.</returns>
+    public async Task<SingleResponse<ExamDto>> UpdateExam(ExamDto examDto, CancellationToken cancellationToken)
+    {
+        if (examDto == null) throw new ArgumentNullException(nameof(examDto));
+
+        var validator = new ExamDtoValidator();
+        var validationResult = validator.Validate(examDto);
+
+        if (!validationResult.IsValid)
+        {
+            return new SingleResponse<ExamDto>
+            {
+                Status = HttpStatusCode.BadRequest,
+                Messages = validationResult.Errors.Select(e => new ResponseMessage { Message = e.ErrorMessage }).ToList()
+            };
+        }
+
+        var exam = await _dbContext.Exams.FirstOrDefaultAsync(e => e.ExamId == examDto.ExamId, cancellationToken);
+        if (exam == null)
+        {
+            return new SingleResponse<ExamDto>
+            {
+                Status = HttpStatusCode.NotFound,
+                Messages = new List<ResponseMessage> { new ResponseMessage { Message = "Exam not found." } }
+            };
+        }
+
+
+        exam.Title = examDto.Title;
+        exam.Description = examDto.Description;
+        exam.StartDate = examDto.StartDate;
+        exam.EndDate = examDto.EndDate;
+        exam.Duration = examDto.Duration;
+        exam.TotalQuestions = examDto.TotalQuestions;
+        exam.TotalMarks = examDto.TotalMarks;
+        exam.PassingMarks = examDto.PassingMarks;
+        exam.IsRandomized = examDto.IsRandomized;
+        exam.IsActive = examDto.IsActive;
+        exam.CreatedBy = examDto.CreatedBy;
+        exam.CreatedOn = examDto.CreatedOn;
+        exam.UpdatedOn = DateTime.UtcNow;
+
+        try
+        {
+            await _dbContext.SaveChangesAsync(cancellationToken);
+        }
+        catch (DbUpdateException ex)
+        {
+            // Log exception here
+            return new SingleResponse<ExamDto>
+            {
+                Status = HttpStatusCode.InternalServerError,
+                Messages = new List<ResponseMessage> { new ResponseMessage { Message = "An error occurred while updating the exam." } }
+            };
+        }
+
+        return new SingleResponse<ExamDto>
+        {
+            Data = examDto,
+            Status = HttpStatusCode.OK
+        };
     }
 }

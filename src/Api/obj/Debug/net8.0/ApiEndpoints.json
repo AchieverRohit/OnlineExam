@@ -319,6 +319,32 @@
   },
   {
     "ContainingType": "thinkschool.OnlineExam.Api.Controllers.ExamController",
+    "Method": "PatchExam",
+    "RelativePath": "api/v1/Exam/PatchExam",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "examDto",
+        "Type": "ExamDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "thinkschool.OnlineExam.Core.Models.Base.SingleResponse\u00601[[ExamDto, thinkschool.OnlineExam.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "thinkschool.OnlineExam.Api.Controllers.ExamController",
     "Method": "UpdateExam",
     "RelativePath": "api/v1/Exam/UpdateExam",
     "HttpMethod": "POST",

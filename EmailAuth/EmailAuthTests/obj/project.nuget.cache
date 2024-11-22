@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S/6LY57Bt1Y=",
+  "dgSpecHash": "KaPF0/U5pvs=",
   "success": true,
-  "projectFilePath": "E:\\ThinkSchool\\Thinkcode\\OnlineExam1\\OnlineExam1\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj",
+  "projectFilePath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\A\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

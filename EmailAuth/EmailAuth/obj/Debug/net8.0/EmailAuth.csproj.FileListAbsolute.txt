@@ -34,3 +34,16 @@ E:\ThinkSchool\Thinkcode\OnlineExam1\OnlineExam1\EmailAuth\EmailAuth\obj\Debug\n
 E:\ThinkSchool\Thinkcode\OnlineExam1\OnlineExam1\EmailAuth\EmailAuth\obj\Debug\net8.0\refint\EmailAuth.dll
 E:\ThinkSchool\Thinkcode\OnlineExam1\OnlineExam1\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.pdb
 E:\ThinkSchool\Thinkcode\OnlineExam1\OnlineExam1\EmailAuth\EmailAuth\obj\Debug\net8.0\ref\EmailAuth.dll
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\bin\Debug\net8.0\EmailAuth.deps.json
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\bin\Debug\net8.0\EmailAuth.dll
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\bin\Debug\net8.0\EmailAuth.pdb
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.csproj.AssemblyReference.cache
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.GeneratedMSBuildEditorConfig.editorconfig
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.AssemblyInfoInputs.cache
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.AssemblyInfo.cs
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.csproj.CoreCompileInputs.cache
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.sourcelink.json
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.dll
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\refint\EmailAuth.dll
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.pdb
+E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\ref\EmailAuth.dll

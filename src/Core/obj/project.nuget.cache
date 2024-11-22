@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QKi9s3PmVpA=",
+  "dgSpecHash": "cFKNQQ0fjj4=",
   "success": true,
-  "projectFilePath": "E:\\ThinkSchool\\Thinkcode\\OnlineExam1\\OnlineExam1\\src\\Core\\thinkschool.OnlineExam.Core.csproj",
+  "projectFilePath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\thinkschool.OnlineExam.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\A\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",

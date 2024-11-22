@@ -126,5 +126,20 @@ namespace thinkschool.OnlineExam.Api.Controllers
                 return StatusCode(500, "An error occurred while retrieving exams.");
             }
         }
+
+        /// <summary>
+        /// Updates the exam details.
+        /// </summary>
+        /// <param name="examDto">The exam data transfer object.</param>
+        /// <param name="cancellationToken">Cancellation token to cancel the request.</param>
+        /// <returns>An Action result containing the SingleResponse of the operation.</returns>
+        [HttpPatch("PatchExam")]
+        public async Task<ActionResult<SingleResponse<ExamDto>>> PatchExam([FromBody] ExamDto examDto, CancellationToken cancellationToken)
+        {
+            if (examDto == null) return BadRequest("Exam data is required.");
+
+            var result = await _examService.UpdateExam(examDto, cancellationToken);
+            return HandleResult(result);
+        }
     }
 }
