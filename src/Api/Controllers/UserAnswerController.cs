@@ -1,4 +1,6 @@
 
+using thinkschool.OnlineExam.Core.Models.UserAnswerDtos;
+
 namespace thinkschool.OnlineExam.Api.Controllers
 {
     public class UserAnswerController : BaseController
@@ -76,6 +78,20 @@ namespace thinkschool.OnlineExam.Api.Controllers
            return HandleResult(result);
         }
 
+        /// <summary>
+        /// API endpoint to submit an answer.
+        /// </summary>
+        /// <param name="submitAnswerDto">The answer details provided in the request body.</param>
+        /// <param name="cancellationToken">Cancellation token to cancel the operation.</param>
+        /// <returns>A standardized action result containing the submission result.</returns>
+        [HttpPost("SubmitAnswer")]
+        public async Task<ActionResult<SingleResponse<string>>> SubmitAnswer([FromBody] SubmitAnswerDto submitAnswerDto, CancellationToken cancellationToken)
+        {
+            if (submitAnswerDto == null) return BadRequest("Invalid submission data.");
+
+            var result = await _servicesCollection.UserAnswerServices.SubmitAnswer(submitAnswerDto, cancellationToken);
+            return HandleResult(result);
+        }
     }
 }
 

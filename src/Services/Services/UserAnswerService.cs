@@ -1,4 +1,6 @@
 
+using thinkschool.OnlineExam.Core.Models.UserAnswerDtos;
+
 namespace thinkschool.OnlineExam.Services.Services;
 public class UserAnswerService : IUserAnswerService
 {
@@ -62,7 +64,56 @@ public class UserAnswerService : IUserAnswerService
         await _dbContext.SaveChangesAsync(); // Saves changes to the database
         return new BaseResponse(); // Returns a base response
      }
-       
+
+    /// <summary>
+    /// Submits an answer for a given question.
+    /// </summary>
+    /// <param name="submitAnswerDto">Data transfer object containing answer details.</param>
+    /// <param name="cancellationToken">Cancellation token to cancel the operation.</param>
+    /// <returns>A response indicating the submission result.</returns>
+    /// <exception cref="ArgumentNullException">Throws if submitAnswerDto is null.</exception>
+    public async Task<SingleResponse<string>> SubmitAnswer(SubmitAnswerDto submitAnswerDto, CancellationToken cancellationToken)
+    {
+        if (submitAnswerDto == null) throw new ArgumentNullException(nameof(submitAnswerDto));
+        try
+        {
+            var userAnswer = new UserAnswer
+            {
+                QuestionId = submitAnswerDto.QuestionId,
+                UserExamId = submitAnswerDto.UserExamId,
+                SectionId = submitAnswerDto.SectionId
+            };
+
+            _dbContext.UserAnswers.Add(userAnswer);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+
+            var userAnswerOptions = submitAnswerDto.OptionIds.Select(optionId => new UserAnswerOption
+            {
+                UserAnswerId = userAnswer.UserAnswerId,
+                OptionId = optionId
+            }).ToList();
+
+            _dbContext.UserAnswerOptions.AddRange(userAnswerOptions);
+
+            await _dbContext.SaveChangesAsync(cancellationToken);
+
+            return new SingleResponse<string>
+            {
+                Data = "Answer submitted successfully.",
+                Status = HttpStatusCode.OK
+            };
+        }
+        catch (Exception ex)
+        {
+            // Log the exception (consider using a logging framework)
+            return new SingleResponse<string>
+            {
+                Data = "An error occurred while submitting the answer.",
+                Status = HttpStatusCode.InternalServerError
+            };
+        }
+    }
+
 }
 
 
