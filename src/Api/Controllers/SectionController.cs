@@ -104,6 +104,29 @@ namespace thinkschool.OnlineExam.Api.Controllers
                 return StatusCode(500, "An error occurred while processing your request.");
             }
         }
+
+        /// <summary>
+        /// API endpoint to get section details by section ID.
+        /// </summary>
+        /// <param name="sectionId">The ID of the section.</param>
+        /// <param name="cancellationToken">Token to cancel the operation.</param>
+        /// <returns>An ActionResult with SingleResponse containing section details.</returns>
+        [HttpGet("GetSectionDetails")]
+        public async Task<ActionResult<SingleResponse<SectionDetailsResponseDto>>> GetSectionDetails(int sectionId, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var result = await _servicesCollection.SectionServices.GetSectionDetails(sectionId, cancellationToken);
+                return HandleResult(result);
+            }
+            catch (Exception ex)
+            {
+                // Log exception
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+
     }
 }
 

@@ -109,7 +109,105 @@ public class UserExamService : IUserExamService
         return new ListResponse<UserExamWithResultDto> { Data = userExams };
     }
 
+    /// <summary>
+    /// Retrieves the details of a user's exam based on the provided UserExamId.
+    /// </summary>
+    /// <param name="userExamId">The ID of the user exam.</param>
+    /// <param name="cancellationToken">Cancellation token for the async operation.</param>
+    /// <returns>A DTO containing the user exam details.</returns>
+    /// <exception cref="ArgumentNullException">Thrown when the UserExamId is not valid.</exception>
+    public async Task<SingleResponse<UserExamDetailsResponseDto>> GetUserExamDetails(int userExamId, CancellationToken cancellationToken)
+    {
+        if (userExamId <= 0)
+        {
+            throw new ArgumentNullException(nameof(userExamId), "UserExamId must be greater than zero.");
+        }
+
+        try
+        {
+            var userExamDetails = await _dbContext.UserExams
+                .Where(ue => ue.UserExamId == userExamId)
+                .Join(_dbContext.ExamResults,
+                      ue => ue.UserExamId,
+                      er => er.UserExamId,
+                      (ue, er) => new { ue, er })
+                .Join(_dbContext.Exams,
+                      temp => temp.ue.ExamId,
+                      e => e.ExamId,
+                      (temp, e) => new UserExamDetailsResponseDto
+                      {
+                          TotalMarks = temp.ue.TotalMarks,
+                          ExamStatus = temp.ue.ExamStatus,
+                          NoOfAttempt = temp.ue.NoOfAttempt,
+                          RsultDate = temp.er.CreatedOn,
+                          TotalObtainedMarks = temp.er.TotalObtainedMarks,
+                          ResultStatus = temp.er.ResultStatus,
+                          PassingMarks = e.PassingMarks
+                      })
+                .FirstOrDefaultAsync(cancellationToken);
+
+            return new SingleResponse<UserExamDetailsResponseDto> { Data = userExamDetails };
+        }
+        catch (Exception ex)
+        {
+            // Log the exception
+            throw;
+        }
+    }
+
+
+    /// <summary>
+    /// Retrieves a list of user exam reports.
+    /// </summary>
+    /// <param name="cancellationToken">Cancellation token to cancel the operation if needed.</param>
+    /// <returns>A list response containing UserExamReportDto objects.</returns>
+    public async Task<ListResponse<UserExamReportDto>> GetUserExamReport(CancellationToken cancellationToken)
+    {
+        if (cancellationToken == null)
+        {
+            throw new ArgumentNullException(nameof(cancellationToken));
+        }
+
+        try
+        {
+            var reportData = await _dbContext.UserExams
+                    .Join(_dbContext.Exams,
+                          ue => ue.ExamId,
+                          e => e.ExamId,
+                          (ue, e) => new { ue, e })
+                    .Join(_dbContext.ApplicationUsers,
+                          combined => combined.ue.UserId,
+                          user => user.Id,
+                          (combined, user) => new { combined.ue, combined.e, user })
+                    .Where(x => x.ue.FinishedOn.HasValue &&
+                                (x.ue.FinishedOn.Value - x.ue.StartedOn).TotalMinutes < x.e.Duration * 0.8)
+                    .Select(x => new UserExamReportDto
+                    {
+                        UserExamId = x.ue.UserExamId,
+                        UserId = x.ue.UserId,
+                        ExamId = x.ue.ExamId,
+                        ExamStatus = x.ue.ExamStatus,
+                        TotalMarks = x.ue.TotalMarks,
+                        NoOfAttempt = x.ue.NoOfAttempt,
+                        Title = x.e.Title,
+                        Duration = x.e.Duration,
+                        FirstName = x.user.FirstName,
+                        LastName = x.user.LastName,
+                        Email = x.user.Email
+                    }).ToListAsync(cancellationToken);
+
+
+            return new ListResponse<UserExamReportDto> { Data = reportData };
+        }
+        catch (Exception ex)
+        {
+            // Log exception
+            throw new ApplicationException("An error occurred while generating the user exam report.", ex);
+        }
+    }
+
 }
+
 
 
 

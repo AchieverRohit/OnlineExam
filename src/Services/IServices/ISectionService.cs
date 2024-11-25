@@ -11,6 +11,8 @@ public interface ISectionService
 
     Task<ListResponse<SectionResDto>> GetSectionsByExamId(int examId, CancellationToken cancellationToken);
 
+    Task<SingleResponse<SectionDetailsResponseDto>> GetSectionDetails(int sectionId, CancellationToken cancellationToken);
+
 }
 
 

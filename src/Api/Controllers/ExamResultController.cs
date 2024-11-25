@@ -76,6 +76,19 @@ namespace thinkschool.OnlineExam.Api.Controllers
            return HandleResult(result);
         }
 
+        /// <summary>
+        /// API endpoint to calculate and create an exam result.
+        /// </summary>
+        /// <param name="userExamId">The ID of the user exam.</param>
+        /// <param name="cancellationToken">Token to cancel the operation.</param>
+        /// <returns>Result containing the ExamResultDto or an error message.</returns>
+        [HttpGet("CalculateAndCreateExamResult")]
+        public async Task<ActionResult<SingleResponse<ExamResultShortDto>>> CalculateAndCreateExamResult(int userExamId, CancellationToken cancellationToken)
+        {
+            var result = await _servicesCollection.ExamResultServices.CalculateAndCreateExamResult(userExamId, cancellationToken);
+            return HandleResult(result);
+        }
+
     }
 }
 

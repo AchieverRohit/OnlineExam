@@ -102,6 +102,56 @@ namespace thinkschool.OnlineExam.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint to get details of a user's exam.
+        /// </summary>
+        /// <param name="userExamId">The ID of the user exam.</param>
+        /// <param name="cancellationToken">Cancellation token for the async operation.</param>
+        /// <returns>The user exam details wrapped in an action result.</returns>
+        [HttpGet("GetUserExamDetails")]
+        public async Task<ActionResult<SingleResponse<UserExamDetailsResponseDto>>> GetUserExamDetails(int userExamId, CancellationToken cancellationToken)
+        {
+            if (userExamId <= 0)
+            {
+                return BadRequest("Invalid UserExamId.");
+            }
+
+            try
+            {
+                var result = await _servicesCollection.UserExamServices.GetUserExamDetails(userExamId, cancellationToken);
+                return HandleResult(result);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
+        }
+
+        /// <summary>
+        /// Generates a user exam report.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token to cancel the operation if needed.</param>
+        /// <returns>An ActionResult containing a list response of UserExamReportDto.</returns>
+        [HttpGet("GenerateUserExamReport")]
+        public async Task<ActionResult<ListResponse<UserExamReportDto>>> GenerateUserExamReport(CancellationToken cancellationToken)
+        {
+            if (cancellationToken == null)
+            {
+                throw new ArgumentNullException(nameof(cancellationToken));
+            }
+
+            try
+            {
+                var result = await _servicesCollection.UserExamServices.GetUserExamReport(cancellationToken);
+                return HandleResult(result);
+            }
+            catch (Exception ex)
+            {
+                // Log exception
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while generating the report.");
+            }
+        }
     }
 }
 

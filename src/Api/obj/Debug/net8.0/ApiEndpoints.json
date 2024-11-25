@@ -397,6 +397,32 @@
   },
   {
     "ContainingType": "thinkschool.OnlineExam.Api.Controllers.ExamResultController",
+    "Method": "CalculateAndCreateExamResult",
+    "RelativePath": "api/v1/ExamResult/CalculateAndCreateExamResult",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userExamId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "thinkschool.OnlineExam.Core.Models.Base.SingleResponse\u00601[[thinkschool.OnlineExam.Core.Models.ExamResultShortDto, thinkschool.OnlineExam.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "thinkschool.OnlineExam.Api.Controllers.ExamResultController",
     "Method": "DeleteExamResult",
     "RelativePath": "api/v1/ExamResult/DeleteExamResult/{ExamResultId}",
     "HttpMethod": "DELETE",
@@ -871,6 +897,32 @@
   },
   {
     "ContainingType": "thinkschool.OnlineExam.Api.Controllers.SectionController",
+    "Method": "GetSectionDetails",
+    "RelativePath": "api/v1/Section/GetSectionDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sectionId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "thinkschool.OnlineExam.Core.Models.Base.SingleResponse\u00601[[thinkschool.OnlineExam.Core.Models.SectionDetailsResponseDto, thinkschool.OnlineExam.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "thinkschool.OnlineExam.Api.Controllers.SectionController",
     "Method": "GetSectionsByExamId",
     "RelativePath": "api/v1/Section/GetSectionsByExamId",
     "HttpMethod": "GET",
@@ -1246,6 +1298,26 @@
   },
   {
     "ContainingType": "thinkschool.OnlineExam.Api.Controllers.UserExamController",
+    "Method": "GenerateUserExamReport",
+    "RelativePath": "api/v1/UserExam/GenerateUserExamReport",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "thinkschool.OnlineExam.Core.Models.Base.ListResponse\u00601[[thinkschool.OnlineExam.Core.Models.UserExamReportDto, thinkschool.OnlineExam.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "thinkschool.OnlineExam.Api.Controllers.UserExamController",
     "Method": "GetAllUserExam",
     "RelativePath": "api/v1/UserExam/GetAllUserExam",
     "HttpMethod": "POST",
@@ -1292,6 +1364,32 @@
     "ReturnTypes": [
       {
         "Type": "thinkschool.OnlineExam.Core.Models.Base.SingleResponse\u00601[[thinkschool.OnlineExam.Core.Models.UserExamResDetailDto, thinkschool.OnlineExam.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "thinkschool.OnlineExam.Api.Controllers.UserExamController",
+    "Method": "GetUserExamDetails",
+    "RelativePath": "api/v1/UserExam/GetUserExamDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userExamId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "thinkschool.OnlineExam.Core.Models.Base.SingleResponse\u00601[[thinkschool.OnlineExam.Core.Models.UserExamDetailsResponseDto, thinkschool.OnlineExam.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

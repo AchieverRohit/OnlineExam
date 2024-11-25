@@ -909,6 +909,45 @@
         }
       }
     },
+    "/api/v1/ExamResult/CalculateAndCreateExamResult": {
+      "get": {
+        "tags": [
+          "ExamResult"
+        ],
+        "parameters": [
+          {
+            "name": "userExamId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultShortDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultShortDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamResultShortDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/Option/GetAllOption": {
       "post": {
         "tags": [
@@ -1694,6 +1733,45 @@
         }
       }
     },
+    "/api/v1/Section/GetSectionDetails": {
+      "get": {
+        "tags": [
+          "Section"
+        ],
+        "parameters": [
+          {
+            "name": "sectionId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionDetailsResponseDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionDetailsResponseDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionDetailsResponseDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/SectionResult/GetAllSectionResult": {
       "post": {
         "tags": [
@@ -2466,6 +2544,74 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UserExamWithResultDtoListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserExam/GetUserExamDetails": {
+      "get": {
+        "tags": [
+          "UserExam"
+        ],
+        "parameters": [
+          {
+            "name": "userExamId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamDetailsResponseDtoSingleResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamDetailsResponseDtoSingleResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamDetailsResponseDtoSingleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UserExam/GenerateUserExamReport": {
+      "get": {
+        "tags": [
+          "UserExam"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamReportDtoListResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamReportDtoListResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserExamReportDtoListResponse"
                 }
               }
             }
@@ -3766,6 +3912,35 @@
         },
         "additionalProperties": false
       },
+      "ExamResultShortDto": {
+        "type": "object",
+        "properties": {
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExamResultShortDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ExamResultShortDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "GetAllApplicationUserReqDto": {
         "type": "object",
         "properties": {
@@ -4426,6 +4601,64 @@
         },
         "additionalProperties": false
       },
+      "QuestionDetailsResponseDto": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionText": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMedia": {
+            "type": "boolean"
+          },
+          "mediaType": {
+            "type": "string",
+            "nullable": true
+          },
+          "mediaURL": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMultipleChoice": {
+            "type": "boolean"
+          },
+          "isFromQuestionBank": {
+            "type": "boolean"
+          },
+          "questionMaxMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OptionResDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "QuestionDto": {
         "type": "object",
         "properties": {
@@ -4725,6 +4958,78 @@
           },
           "description": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionDetailsResponseDto": {
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalQuestions": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "weightagePercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuestionDetailsResponseDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SectionDetailsResponseDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/SectionDetailsResponseDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
             "nullable": true
           }
         },
@@ -5588,6 +5893,137 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/UserAnswerResDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserExamDetailsResponseDto": {
+        "type": "object",
+        "properties": {
+          "totalMarks": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "examStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "noOfAttempt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rsultDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalObtainedMarks": {
+            "type": "number",
+            "format": "double"
+          },
+          "resultStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "passingMarks": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserExamDetailsResponseDtoSingleResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/UserExamDetailsResponseDto"
+          },
+          "status": {
+            "$ref": "#/components/schemas/HttpStatusCode"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserExamReportDto": {
+        "type": "object",
+        "properties": {
+          "userExamId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "examId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "examStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalMarks": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "noOfAttempt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "duration": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserExamReportDtoListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserExamReportDto"
+            },
+            "nullable": true
+          },
+          "pageInfo": {
+            "$ref": "#/components/schemas/PageDetails"
           },
           "status": {
             "$ref": "#/components/schemas/HttpStatusCode"

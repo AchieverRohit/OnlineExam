@@ -110,7 +110,7 @@ namespace thinkschool.OnlineExam.Core.Models
 
         public DateTime UpdatedOn { get; set; }
 
-        public virtual List<QuestionDetailsResponseDto>? QuestionSections { get; set; }
+        public virtual List<QuestionDetailsResponseDto>? Questions { get; set; }
     }
     public class QuestionDetailsResponseDto : IMapFrom<Question>
     {
@@ -138,7 +138,7 @@ namespace thinkschool.OnlineExam.Core.Models
 
         public DateTime UpdatedOn { get; set; }
 
-        public virtual List<OptionResDto>? OptionQuestions { get; set; }
+        public virtual List<OptionResDto>? Options { get; set; }
     }
 }
 

@@ -62,7 +62,103 @@ public class ExamResultService : IExamResultService
         await _dbContext.SaveChangesAsync(); // Saves changes to the database
         return new BaseResponse(); // Returns a base response
      }
-       
+
+    /// <summary>
+    /// Calculates and creates an exam result for the given user exam ID.
+    /// </summary>
+    /// <param name="userExamId">The ID of the user exam.</param>
+    /// <param name="cancellationToken">Token to cancel the operation.</param>
+    /// <returns>SingleResponse containing the ExamResultDto or an error message.</returns>
+    /// <exception cref="ArgumentException">Thrown when userExamId is less than or equal to zero.</exception>
+    public async Task<SingleResponse<ExamResultShortDto>> CalculateAndCreateExamResult(int userExamId, CancellationToken cancellationToken)
+    {
+        if (userExamId <= 0)
+        {
+            throw new ArgumentException("Invalid user exam ID.", nameof(userExamId));
+        }
+
+        var sectionResults = await _dbContext.SectionResults
+                             .Where(sr => sr.UserExamId == userExamId)
+                             .ToListAsync(cancellationToken);
+
+        if (!sectionResults.Any())
+        {
+            return new SingleResponse<ExamResultShortDto>
+            {
+                Status = HttpStatusCode.NotFound,
+                Messages = new List<ResponseMessage> { new ResponseMessage { Message = "No section results found for the given UserExamID." } }
+            };
+        }
+
+        var totalObtainedMarks = sectionResults.Sum(sr => sr.MarksObtained);
+        var resultStatus = sectionResults.All(sr => sr.ResultStatus == "Pass") ? "Pass" : "Fail";
+
+
+        //var SectionResultDtos = new List<SectionResultResDto>();
+
+        //foreach (var sectionResult in sectionResults) {
+        //    SectionResultDtos.Add(
+        //    _mapper.Map<SectionResultResDto>(sectionResult)
+        //    );
+        //}
+
+        var examResult = new ExamResult
+        {
+            UserExamId = userExamId,
+            TotalObtainedMarks = totalObtainedMarks,
+            ResultStatus = resultStatus,
+            CreatedBy = "System",
+            CreatedOn = DateTime.UtcNow,
+            UpdatedOn = DateTime.UtcNow,
+        };
+
+        try
+        {
+            _dbContext.ExamResults.Add(examResult);
+
+            var userExam = await _dbContext.UserExams
+                                 .Where(ue => ue.UserExamId == userExamId)
+                                 .FirstOrDefaultAsync(cancellationToken);
+
+            if (userExam != null)
+            {
+                userExam.ExamStatus = "Completed";
+                userExam.FinishedOn = DateTime.UtcNow;
+                userExam.NoOfAttempt += 1;
+                userExam.UpdatedOn = DateTime.UtcNow;
+                userExam.TotalMarks = totalObtainedMarks;
+            }
+
+            await _dbContext.SaveChangesAsync(cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            // Log the exception (assumed to be implemented)
+            throw new InvalidOperationException("An error occurred while saving the exam result.", ex);
+        }
+
+        //var examResultDto = new ExamResultDetailsResponseDto
+        //{
+        //    ExamResultId = examResult.ExamResultId,
+        //    TotalObtainedMarks = examResult.TotalObtainedMarks,
+        //    ResultStatus = resultStatus,
+        //    CreatedBy = examResult.CreatedBy,
+        //    CreatedOn = examResult.CreatedOn,
+        //    UpdatedOn = examResult.UpdatedOn,
+        //    SectionResults = SectionResultDtos
+        //};
+
+        var examResultDto = new ExamResultShortDto
+        {
+            UserExamId = userExamId
+        };
+
+        return new SingleResponse<ExamResultShortDto>
+        {
+            Data = examResultDto,
+            Status = HttpStatusCode.Created
+        };
+    }
 }
 
 

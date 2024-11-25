@@ -41,6 +41,20 @@ namespace thinkschool.OnlineExam.Core.Models
 
    }
 
-
+    public class ExamResultShortDto
+    {
+        public int UserExamId { get; set; }
+    }
+    public class ExamResultDetailsResponseDto : IMapFrom<ExamResult>
+    {
+        public int ExamResultId { get; set; }
+        public int UserExamId { get; set; }
+        public decimal TotalObtainedMarks { get; set; }
+        public string ResultStatus { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
+        public List<SectionResultResDto> SectionResults { get; set; }
+    }
 }
 

@@ -102,6 +102,65 @@ public class SectionService : ISectionService
             throw new ApplicationException("An error occurred while retrieving sections.", ex);
         }
     }
+
+    /// <summary>
+    /// Retrieves section details including associated questions and options based on the section ID.
+    /// </summary>
+    /// <param name="sectionId">The ID of the section to retrieve details for.</param>
+    /// <param name="cancellationToken">Token to cancel the operation.</param>
+    /// <returns>A SingleResponse containing the section details</returns>
+    /// <exception cref="ArgumentException">Thrown when sectionId is less than or equal to zero.</exception>
+    public async Task<SingleResponse<SectionDetailsResponseDto>> GetSectionDetails(int sectionId, CancellationToken cancellationToken)
+    {
+        if (sectionId <= 0)
+        {
+            throw new ArgumentException("SectionId must be greater than zero.", nameof(sectionId));
+        }
+
+        try
+        {
+            var sectionDetails = await (from s in _dbContext.Sections
+                                        where s.SectionId == sectionId
+                                        select new SectionDetailsResponseDto
+                                        {
+                                            SectionId = s.SectionId,
+                                            Title = s.Title,
+                                            TotalQuestions = s.TotalQuestions,
+                                            TotalMarks = s.TotalMarks,
+                                            PassingMarks = s.PassingMarks,
+                                            WeightagePercentage = s.WeightagePercentage,
+                                            Questions = _dbContext.Questions
+                                                    .Where(q => q.SectionId == s.SectionId)
+                                                    .Select(q => new QuestionDetailsResponseDto
+                                                    {
+                                                        QuestionId = q.QuestionId,
+                                                        QuestionText = q.QuestionText,
+                                                        IsMedia = q.IsMedia,
+                                                        MediaType = q.MediaType,
+                                                        MediaURL = q.MediaURL,
+                                                        IsMultipleChoice = q.IsMultipleChoice,
+                                                        IsFromQuestionBank = q.IsFromQuestionBank,
+                                                        QuestionMaxMarks = q.QuestionMaxMarks,
+                                                        Options = _dbContext.Options
+                                                                .Where(o => o.QuestionId == q.QuestionId)
+                                                                .Select(o => new OptionResDto
+                                                                {
+                                                                    OptionId = o.OptionId,
+                                                                    OptionText = o.OptionText,
+                                                                    IsCorrect = o.IsCorrect,
+                                                                    Marks = o.Marks
+                                                                }).ToList()
+                                                    }).ToList()
+                                        }).FirstOrDefaultAsync(cancellationToken);
+
+            return new SingleResponse<SectionDetailsResponseDto> { Data = sectionDetails };
+        }
+        catch (Exception ex)
+        {
+            // Log exception
+            throw new ApplicationException("An error occurred while retrieving section details.", ex);
+        }
+    }
 }
 
 

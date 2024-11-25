@@ -10,6 +10,9 @@ public interface IUserExamService
     Task<BaseResponse> Delete(int  UserExamId);
     Task<ListResponse<UserExamWithResultDto>> GetUserExamsByExamId(int examId, CancellationToken cancellationToken);
 
+    Task<SingleResponse<UserExamDetailsResponseDto>> GetUserExamDetails(int userExamId, CancellationToken cancellationToken);
+
+    Task<ListResponse<UserExamReportDto>> GetUserExamReport(CancellationToken cancellationToken);
 
 }
 

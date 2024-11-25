@@ -66,5 +66,30 @@ namespace thinkschool.OnlineExam.Core.Models
         public DateTime CreatedOn { get; set; }
         public DateTime UpdatedOn { get; set; }
     }
+    public class UserExamDetailsResponseDto
+    {
+        public decimal? TotalMarks { get; set; }
+        public string ExamStatus { get; set; }
+        public int NoOfAttempt { get; set; }
+        public DateTime RsultDate { get; set; }
+        public decimal TotalObtainedMarks { get; set; }
+        public string ResultStatus { get; set; }
+        public decimal PassingMarks { get; set; }
+    }
+
+    public class UserExamReportDto
+    {
+        public int UserExamId { get; set; }
+        public string UserId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public int ExamId { get; set; }
+        public string ExamStatus { get; set; }
+        public decimal? TotalMarks { get; set; }
+        public int NoOfAttempt { get; set; }
+        public string Title { get; set; }
+        public double Duration { get; set; }
+    }
 }
 
