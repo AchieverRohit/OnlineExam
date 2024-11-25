@@ -141,5 +141,23 @@ namespace thinkschool.OnlineExam.Api.Controllers
             var result = await _examService.UpdateExam(examDto, cancellationToken);
             return HandleResult(result);
         }
+
+        /// <summary>
+        /// API endpoint to retrieve exam details by examId.
+        /// </summary>
+        /// <param name="examId">The ID of the exam.</param>
+        /// <param name="cancellationToken">Cancellation token to cancel the operation.</param>
+        /// <returns>An ActionResult containing the exam details.</returns>
+        [HttpGet("GetExamWithDetails/{examId}")]
+        public async Task<ActionResult<SingleResponse<ExamDetailsResponseDto>>> GetExamWithDetails(int examId, CancellationToken cancellationToken)
+        {
+            if (examId <= 0)
+            {
+                return BadRequest("Exam ID must be greater than zero.");
+            }
+
+            var result = await _examService.GetExamWithDetails(examId, cancellationToken);
+            return HandleResult(result);
+        }
     }
 }
