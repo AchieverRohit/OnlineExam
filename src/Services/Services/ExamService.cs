@@ -271,59 +271,58 @@ public class ExamService : IExamService
 
             throw new ArgumentException("Exam ID must be greater than zero.", nameof(examId));
 
-        var examData = await _dbContext.Exams
+        var examData = _dbContext.Exams
+                    .Select(e => new ExamDetailsResponseDto
+                    {
+                        ExamId = examId,
+                        CreatedBy = e.CreatedBy,
+                        UpdatedOn = e.UpdatedOn,
+                        CreatedOn = e.CreatedOn,
+                        Description = e.Description,
+                        Duration = e.Duration,
+                        EndDate = e.EndDate,
+                        IsActive = e.IsActive,
+                        IsRandomized = e.IsRandomized,
+                        PassingMarks = e.PassingMarks,
+                        StartDate = e.StartDate,
+                        Title = e.Title,
+                        TotalMarks = e.TotalMarks,
+                        TotalQuestions = e.TotalQuestions,
+                        SectionExams = e.SectionExams.Select(s => new SectionDetailsResponseDto
+                        {
+                            SectionId = s.SectionId,
+                            CreatedBy = s.CreatedBy,
+                            UpdatedOn = s.UpdatedOn,
+                            TotalQuestions = s.TotalQuestions,
+                            TotalMarks = s.TotalMarks,
+                            PassingMarks = s.PassingMarks,
+                            CreatedOn = s.CreatedOn,
+                            WeightagePercentage = s.WeightagePercentage,
+                            ExamId = s.ExamId,
+                            Questions = s.QuestionSections.Select(q => new QuestionDetailsResponseDto
+                            {
+                                CreatedBy = q.CreatedBy,
+                                SectionId = q.SectionId,
+                                IsFromQuestionBank = q.IsFromQuestionBank,
+                                IsMedia = q.IsMedia,
+                                IsMultipleChoice = q.IsMultipleChoice,
+                                MediaType = q.MediaType,
+                                MediaURL = q.MediaURL,
+                                QuestionMaxMarks = q.QuestionMaxMarks,
+                                QuestionText = q.QuestionText,
+                                Options = q.OptionQuestions.Select(o => new OptionResDto
+                                {
+                                    OptionId = o.OptionId,
+                                    QuestionId = o.QuestionId,
+                                    Marks = o.Marks,
+                                    OptionText = o.OptionText,
+                                    IsCorrect = o.IsCorrect
+                                }).ToList()
+                            }).ToList()
+                        }).ToList()
+                    })
+                    .FirstOrDefault();
 
-        .Where(e => e.ExamId == examId)
-
-        .Include(e => e.SectionExams.Where(s => s.ExamId == examId))
-
-            .ThenInclude(s => s.QuestionSections)
-
-                .ThenInclude(q => q.OptionQuestions)
-
-        .FirstOrDefaultAsync();
-
-        //var examData = await _dbContext.Exams
-
-        //    .Where(e => e.ExamId == examId)
-
-        //    .Select(e => new
-
-        //    {
-
-        //        Exam = e,
-
-        //        Sections = _dbContext.Sections
-
-        //            .Where(s => s.ExamId == e.ExamId)
-
-        //            .Select(s => new
-
-        //            {
-
-        //                Section = s,
-
-        //                Questions = _dbContext.Questions
-
-        //                    .Where(q => q.SectionId == s.SectionId)
-
-        //                    .Select(q => new
-
-        //                    {
-
-        //                        Question = q,
-
-        //                        Options = _dbContext.Options
-
-        //                            .Where(o => o.QuestionId == q.QuestionId)
-
-        //                            .ToList()
-
-        //                    }).ToList()
-
-        //            }).ToList()
-
-        //    }).FirstOrDefaultAsync(cancellationToken);
 
         if (examData == null)
 

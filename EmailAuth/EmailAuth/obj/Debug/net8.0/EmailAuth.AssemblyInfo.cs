@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmailAuth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e03a5f84f256ab88d7f8d68d446643da4b1bd552")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+341f4e7945e1cd4863729763dc769e508884b67d")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmailAuth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmailAuth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

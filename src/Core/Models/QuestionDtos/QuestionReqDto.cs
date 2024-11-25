@@ -61,7 +61,7 @@ namespace thinkschool.OnlineExam.Core.Models
         public int QuestionId { get; set; }
     }
 
-    public class QuestionDto
+    public class QuestionDto : IMapFrom<Question>
     {
         public int SectionId { get; set; }
         public string QuestionText { get; set; }
@@ -75,7 +75,7 @@ namespace thinkschool.OnlineExam.Core.Models
         public List<OptionDto> Options { get; set; } = new List<OptionDto>();
     }
 
-    public class OptionDto
+    public class OptionDto : IMapFrom<Option>
     {
         public string OptionText { get; set; }
         public bool IsCorrect { get; set; }

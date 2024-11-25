@@ -3,28 +3,56 @@
   "WorkspaceRootPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\api\\controllers\\examresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\examresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\services\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\services\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\services\\userexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\services\\userexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\api\\controllers\\sectioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\sectioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\services\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\services\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\iservices\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\iservices\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\api\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\core\\validations\\questionvalidations\\questiondtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\validations\\questionvalidations\\questiondtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\core\\models\\questiondtos\\questionreqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\models\\questiondtos\\questionreqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\core\\models\\userexamdtos\\userexamresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\models\\userexamdtos\\userexamresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\api\\controllers\\userexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\userexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\iservices\\iuserexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\iservices\\iuserexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\api\\controllers\\examresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\examresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\core\\models\\userexamdtos\\userexamreqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\models\\userexamdtos\\userexamreqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\api\\controllers\\userexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\userexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\services\\userexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\services\\userexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|e:\\thinkschool\\thinkcode\\repo\\api\\src\\services\\iservices\\iuserexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|solutionrelative:src\\services\\iservices\\iuserexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,6 +67,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ExamService.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\Services\\ExamService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Services\\ExamService.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\Services\\ExamService.cs",
+              "RelativeToolTip": "src\\Services\\Services\\ExamService.cs",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAAAEIBAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:50:03.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SectionController.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Api\\Controllers\\SectionController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Controllers\\SectionController.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Api\\Controllers\\SectionController.cs",
+              "RelativeToolTip": "src\\Api\\Controllers\\SectionController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:49:48.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IQuestionService.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\IServices\\IQuestionService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\IServices\\IQuestionService.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\IServices\\IQuestionService.cs",
+              "RelativeToolTip": "src\\Services\\IServices\\IQuestionService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:46:52.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QuestionDtoValidator.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\Validations\\QuestionValidations\\QuestionDtoValidator.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Validations\\QuestionValidations\\QuestionDtoValidator.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\Validations\\QuestionValidations\\QuestionDtoValidator.cs",
+              "RelativeToolTip": "src\\Core\\Validations\\QuestionValidations\\QuestionDtoValidator.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAwwDgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:46:19.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "QuestionReqDto.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\Models\\QuestionDtos\\QuestionReqDto.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Models\\QuestionDtos\\QuestionReqDto.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\Models\\QuestionDtos\\QuestionReqDto.cs",
+              "RelativeToolTip": "src\\Core\\Models\\QuestionDtos\\QuestionReqDto.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswE0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:43:07.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuestionService.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\Services\\QuestionService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\Services\\QuestionService.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\Services\\QuestionService.cs",
+              "RelativeToolTip": "src\\Services\\Services\\QuestionService.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:42:56.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "QuestionController.cs",
+              "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Api\\Controllers\\QuestionController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Controllers\\QuestionController.cs",
+              "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Api\\Controllers\\QuestionController.cs",
+              "RelativeToolTip": "src\\Api\\Controllers\\QuestionController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAwFwAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:38:23.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ExamResultController.cs",
               "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Api\\Controllers\\ExamResultController.cs",
               "RelativeDocumentMoniker": "src\\Api\\Controllers\\ExamResultController.cs",
@@ -51,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "UserExamController.cs",
               "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Api\\Controllers\\UserExamController.cs",
               "RelativeDocumentMoniker": "src\\Api\\Controllers\\UserExamController.cs",
@@ -59,11 +178,12 @@
               "RelativeToolTip": "src\\Api\\Controllers\\UserExamController.cs",
               "ViewState": "AgIAAIIAAAAAAAAAAAAqwIwAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:45:48.352Z"
+              "WhenOpened": "2024-11-22T11:45:48.352Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "UserExamService.cs",
               "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\Services\\UserExamService.cs",
               "RelativeDocumentMoniker": "src\\Services\\Services\\UserExamService.cs",
@@ -76,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "IUserExamService.cs",
               "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\IServices\\IUserExamService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\IUserExamService.cs",
@@ -88,19 +208,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "UserExamResDto.cs",
               "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
               "RelativeDocumentMoniker": "src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
               "ToolTip": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
               "RelativeToolTip": "src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAA1wFUAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAzwFUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:44:02.933Z"
+              "WhenOpened": "2024-11-22T11:44:02.933Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "UserExamReqDto.cs",
               "DocumentMoniker": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
               "RelativeDocumentMoniker": "src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
@@ -108,7 +229,8 @@
               "RelativeToolTip": "src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:44:01.466Z"
+              "WhenOpened": "2024-11-22T11:44:01.466Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -77,6 +77,7 @@ public class QuestionService : IQuestionService
     {
         if (questionDto == null) throw new ArgumentNullException(nameof(questionDto));
 
+        // Validate the QuestionDto
         var validator = new QuestionDtoValidator();
         var validationResult = validator.Validate(questionDto);
 
@@ -85,40 +86,69 @@ public class QuestionService : IQuestionService
             return new SingleResponse<QuestionDto>
             {
                 Status = HttpStatusCode.BadRequest,
-                Messages = validationResult.Errors.Select(e => new ResponseMessage { Message = e.ErrorMessage }).ToList()
+                Messages = validationResult.Errors
+                    .Select(e => new ResponseMessage { Message = e.ErrorMessage })
+                    .ToList()
             };
         }
 
         try
         {
-            var question = _mapper.Map<Question>(questionDto);
-            _dbContext.Questions.Add(question);
+            // Map the QuestionDto to Question Entity
+            var question = new Question
+            {
+                CreatedBy = questionDto.CreatedBy,
+                IsFromQuestionBank = questionDto.IsFromQuestionBank,
+                IsMedia = questionDto.IsMedia,
+                IsMultipleChoice = questionDto.IsMultipleChoice,
+                MediaType = questionDto.MediaType,
+                MediaURL = questionDto.MediaURL,
+                QuestionMaxMarks = questionDto.QuestionMaxMarks,
+                QuestionText = questionDto.QuestionText,
+                SectionId = questionDto.SectionId
+            };
 
+            // Add the Question to the DbContext
+            await _dbContext.Questions.AddAsync(question, cancellationToken);
+            await _dbContext.SaveChangesAsync(cancellationToken); // Save to generate QuestionId
+
+            // Add Options
             foreach (var optionDto in questionDto.Options)
             {
-                var option = _mapper.Map<Option>(optionDto);
-                option.QuestionId = question.QuestionId;
-                _dbContext.Options.Add(option);
+                var option = new Option
+                {
+                    QuestionId = question.QuestionId, // Use the saved QuestionId
+                    IsCorrect = optionDto.IsCorrect,
+                    Marks = optionDto.Marks,
+                    OptionText = optionDto.OptionText // Correctly map OptionText
+                };
+
+                await _dbContext.Options.AddAsync(option, cancellationToken);
             }
 
+            // Save all Options
             await _dbContext.SaveChangesAsync(cancellationToken);
+
+            // Return Response
+            return new SingleResponse<QuestionDto>
+            {
+                Status = HttpStatusCode.Created,
+                Data = questionDto
+            };
         }
         catch (Exception ex)
         {
-            // Log the exception (logging mechanism not shown here)
             return new SingleResponse<QuestionDto>
             {
                 Status = HttpStatusCode.InternalServerError,
-                Messages = new List<ResponseMessage> { new ResponseMessage { Message = ex.Message } }
+                Messages = new List<ResponseMessage>
+            {
+                new ResponseMessage { Message = ex.Message }
+            }
             };
         }
-
-        return new SingleResponse<QuestionDto>
-        {
-            Data = questionDto,
-            Status = HttpStatusCode.Created
-        };
     }
+
 }
 
 
