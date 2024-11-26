@@ -1274,10 +1274,7 @@
           "Swashbuckle.AspNetCore.Newtonsoft": "6.6.2"
         },
         "runtime": {
-          "EmailAuth.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "EmailAuth.dll": {}
         }
       },
       "thinkschool.OnlineExam.Core/1.0.0": {
@@ -1287,10 +1284,7 @@
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
-          "thinkschool.OnlineExam.Core.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "thinkschool.OnlineExam.Core.dll": {}
         }
       },
       "thinkschool.OnlineExam.DataAccess/1.0.0": {
@@ -1302,10 +1296,7 @@
           "thinkschool.OnlineExam.Core": "1.0.0"
         },
         "runtime": {
-          "thinkschool.OnlineExam.DataAccess.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "thinkschool.OnlineExam.DataAccess.dll": {}
         }
       },
       "thinkschool.OnlineExam.Services/1.0.0": {
@@ -1314,10 +1305,7 @@
           "thinkschool.OnlineExam.DataAccess": "1.0.0"
         },
         "runtime": {
-          "thinkschool.OnlineExam.Services.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "thinkschool.OnlineExam.Services.dll": {}
         }
       }
     }

@@ -47,3 +47,16 @@ E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth
 E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\refint\EmailAuth.dll
 E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.pdb
 E:\ThinkSchool\Thinkcode\repo\api\EmailAuth\EmailAuth\obj\Debug\net8.0\ref\EmailAuth.dll
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\bin\Debug\net8.0\EmailAuth.deps.json
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\bin\Debug\net8.0\EmailAuth.dll
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\bin\Debug\net8.0\EmailAuth.pdb
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.csproj.AssemblyReference.cache
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.GeneratedMSBuildEditorConfig.editorconfig
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.AssemblyInfoInputs.cache
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.AssemblyInfo.cs
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.csproj.CoreCompileInputs.cache
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.sourcelink.json
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.dll
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\refint\EmailAuth.dll
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\EmailAuth.pdb
+D:\ThinkBridge\ThinkCode\OnlineExam\EmailAuth\EmailAuth\obj\Debug\net8.0\ref\EmailAuth.dll

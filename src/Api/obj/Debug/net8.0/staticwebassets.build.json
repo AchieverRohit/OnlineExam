@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "g4DFBJLH5TgsH8ZLJickcfD/CCu2E2wbGsLcebyuhYU=",
+  "Hash": "iNU7otrrk0OwCL3c6WEFDNfkCeJOY/K0VLMAznM+duo=",
   "Source": "thinkschool.OnlineExam.Api",
   "BasePath": "_content/thinkschool.OnlineExam.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

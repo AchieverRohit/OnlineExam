@@ -47,3 +47,16 @@ E:\ThinkSchool\Thinkcode\repo\api\src\Core\obj\Debug\net8.0\thinkschool.OnlineEx
 E:\ThinkSchool\Thinkcode\repo\api\src\Core\obj\Debug\net8.0\refint\thinkschool.OnlineExam.Core.dll
 E:\ThinkSchool\Thinkcode\repo\api\src\Core\obj\Debug\net8.0\thinkschool.OnlineExam.Core.pdb
 E:\ThinkSchool\Thinkcode\repo\api\src\Core\obj\Debug\net8.0\ref\thinkschool.OnlineExam.Core.dll
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\bin\Debug\net8.0\thinkschool.OnlineExam.Core.deps.json
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\bin\Debug\net8.0\thinkschool.OnlineExam.Core.dll
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\bin\Debug\net8.0\thinkschool.OnlineExam.Core.pdb
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\thinkschool.OnlineExam.Core.csproj.AssemblyReference.cache
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\thinkschool.OnlineExam.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\thinkschool.OnlineExam.Core.AssemblyInfoInputs.cache
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\thinkschool.OnlineExam.Core.AssemblyInfo.cs
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\thinkschool.OnlineExam.Core.csproj.CoreCompileInputs.cache
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\thinkschool.OnlineExam.Core.sourcelink.json
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\thinkschool.OnlineExam.Core.dll
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\refint\thinkschool.OnlineExam.Core.dll
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\thinkschool.OnlineExam.Core.pdb
+D:\ThinkBridge\ThinkCode\OnlineExam\src\Core\obj\Debug\net8.0\ref\thinkschool.OnlineExam.Core.dll

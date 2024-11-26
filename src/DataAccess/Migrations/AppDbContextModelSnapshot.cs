@@ -337,6 +337,27 @@ namespace thinkschool.OnlineExam.DataAccess.Migrations
                     b.ToTable("ExamResults");
                 });
 
+            modelBuilder.Entity("thinkschool.OnlineExam.Core.Entities.Lookup", b =>
+                {
+                    b.Property<int>("LookupId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LookupId"));
+
+                    b.Property<string>("Identifier")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("LookupId");
+
+                    b.ToTable("Lookups");
+                });
+
             modelBuilder.Entity("thinkschool.OnlineExam.Core.Entities.Option", b =>
                 {
                     b.Property<int>("OptionId")

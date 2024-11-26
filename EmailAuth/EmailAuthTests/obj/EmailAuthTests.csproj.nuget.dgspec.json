@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj": {}
+    "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj": {}
   },
   "projects": {
-    "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj": {
+    "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj",
+        "projectUniqueName": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj",
         "projectName": "EmailAuthTests",
-        "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj",
-        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuthTests\\obj\\",
+        "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuthTests\\EmailAuthTests.csproj",
+        "packagesPath": "C:\\Users\\sande\\.nuget\\packages\\",
+        "outputPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuthTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sande\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj": {
-                "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj"
+              "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj": {
+                "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj"
               }
             }
           }
@@ -46,9 +47,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -91,24 +91,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj": {
+    "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj",
+        "projectUniqueName": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj",
         "projectName": "EmailAuth",
-        "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj",
-        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\obj\\",
+        "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj",
+        "packagesPath": "C:\\Users\\sande\\.nuget\\packages\\",
+        "outputPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sande\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -117,6 +117,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -133,9 +134,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -206,7 +206,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

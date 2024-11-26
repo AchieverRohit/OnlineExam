@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\thinkschool.OnlineExam.Services.csproj": {}
+    "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\thinkschool.OnlineExam.Services.csproj": {}
   },
   "projects": {
-    "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj": {
+    "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj",
+        "projectUniqueName": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj",
         "projectName": "EmailAuth",
-        "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj",
-        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\obj\\",
+        "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj",
+        "packagesPath": "C:\\Users\\sande\\.nuget\\packages\\",
+        "outputPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sande\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,9 +43,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -115,24 +115,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\thinkschool.OnlineExam.Core.csproj": {
+    "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\thinkschool.OnlineExam.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\thinkschool.OnlineExam.Core.csproj",
+        "projectUniqueName": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\thinkschool.OnlineExam.Core.csproj",
         "projectName": "thinkschool.OnlineExam.Core",
-        "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\thinkschool.OnlineExam.Core.csproj",
-        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\obj\\",
+        "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\thinkschool.OnlineExam.Core.csproj",
+        "packagesPath": "C:\\Users\\sande\\.nuget\\packages\\",
+        "outputPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sande\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -141,6 +141,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -157,9 +158,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -194,24 +194,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj": {
+    "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj",
+        "projectUniqueName": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj",
         "projectName": "thinkschool.OnlineExam.DataAccess",
-        "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\DataAccess\\obj\\",
+        "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\sande\\.nuget\\packages\\",
+        "outputPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sande\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -220,14 +220,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\thinkschool.OnlineExam.Core.csproj": {
-                "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Core\\thinkschool.OnlineExam.Core.csproj"
+              "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\thinkschool.OnlineExam.Core.csproj": {
+                "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\thinkschool.OnlineExam.Core.csproj"
               }
             }
           }
@@ -240,9 +241,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -293,24 +293,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\thinkschool.OnlineExam.Services.csproj": {
+    "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\thinkschool.OnlineExam.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\thinkschool.OnlineExam.Services.csproj",
+        "projectUniqueName": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\thinkschool.OnlineExam.Services.csproj",
         "projectName": "thinkschool.OnlineExam.Services",
-        "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\thinkschool.OnlineExam.Services.csproj",
-        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\Services\\obj\\",
+        "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\thinkschool.OnlineExam.Services.csproj",
+        "packagesPath": "C:\\Users\\sande\\.nuget\\packages\\",
+        "outputPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sande\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -319,17 +319,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj": {
-                "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\EmailAuth\\EmailAuth\\EmailAuth.csproj"
+              "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj": {
+                "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\EmailAuth.csproj"
               },
-              "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj": {
-                "projectPath": "E:\\ThinkSchool\\Thinkcode\\repo\\api\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj"
+              "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj": {
+                "projectPath": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\thinkschool.OnlineExam.DataAccess.csproj"
               }
             }
           }
@@ -342,9 +343,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -365,7 +365,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

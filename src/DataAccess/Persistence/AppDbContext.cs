@@ -29,4 +29,5 @@ public class AppDbContext : IdentityDbContext<ApplicationUser> , IAppDbContext
     public DbSet<UserAnswerOption> UserAnswerOptions { get; set; }
     public DbSet<UserAnswer> UserAnswers { get; set; }
     public DbSet<UserExam> UserExams { get; set; }
+    public DbSet<Lookup> Lookups { get; set; }
 }

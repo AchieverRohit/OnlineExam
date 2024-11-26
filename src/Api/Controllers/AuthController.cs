@@ -9,17 +9,20 @@ namespace thinkschool.OnlineExam.Api.Controllers
         private readonly ITokenService _tokenService;
         private readonly SignInManager<ApplicationUser> _signinManager;
         private readonly AppDbContext _context;
+        private readonly IApplicationUserService _applicationUserService;
 
         public AuthController(
             UserManager<ApplicationUser> userManager,
             ITokenService tokenService,
             SignInManager<ApplicationUser> signInManager,
-            AppDbContext context)
+            AppDbContext context,
+            IApplicationUserService applicationUserService)
         {
             _context = context;
             _userManager = userManager;
             _tokenService = tokenService;
             _signinManager = signInManager;
+            _applicationUserService = applicationUserService;
         }
 
         [HttpPost("register")]
@@ -121,6 +124,24 @@ namespace thinkschool.OnlineExam.Api.Controllers
         {
             var user = await _userManager.FindByEmailAsync(email);
             return Ok(user != null); // True if email exists, otherwise false
+        }
+
+        /// <summary>
+        /// Handles HTTP GET requests to retrieve types.
+        /// </summary>
+        /// <param name="type">The type of data to retrieve, included in the request body.</param>
+        /// <param name="cancellationToken">Cancellation token for the request.</param>
+        /// <returns>An ActionResult containing a ListResponse of strings.</returns>
+        [HttpPost("GetTypes")]
+        public async Task<ActionResult<ListResponse<string>>> GetTypes([FromBody] string type, CancellationToken cancellationToken)
+        {
+            if (string.IsNullOrWhiteSpace(type))
+            {
+                return BadRequest("Type parameter cannot be empty.");
+            }
+
+            var result = await _applicationUserService.GetTypes(type, cancellationToken);
+            return HandleResult(result);
         }
     }
 }
