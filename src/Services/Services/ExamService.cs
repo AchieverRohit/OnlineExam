@@ -292,6 +292,7 @@ public class ExamService : IExamService
                         SectionExams = e.SectionExams.Select(s => new SectionDetailsResponseDto
                         {
                             SectionId = s.SectionId,
+                            Title = s.Title,
                             CreatedBy = s.CreatedBy,
                             UpdatedOn = s.UpdatedOn,
                             TotalQuestions = s.TotalQuestions,
@@ -303,6 +304,7 @@ public class ExamService : IExamService
                             Questions = s.QuestionSections.Select(q => new QuestionDetailsResponseDto
                             {
                                 CreatedBy = q.CreatedBy,
+                                QuestionId = q.QuestionId,
                                 SectionId = q.SectionId,
                                 IsFromQuestionBank = q.IsFromQuestionBank,
                                 IsMedia = q.IsMedia,

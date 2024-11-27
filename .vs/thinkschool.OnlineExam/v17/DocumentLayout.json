@@ -15,6 +15,18 @@
       "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|d:\\thinkbridge\\thinkcode\\onlineexam\\src\\api\\controllers\\userexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\userexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|d:\\thinkbridge\\thinkcode\\onlineexam\\src\\core\\models\\userexamdtos\\userexamresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\models\\userexamdtos\\userexamresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|d:\\thinkbridge\\thinkcode\\onlineexam\\src\\core\\models\\userexamdtos\\userexamreqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\models\\userexamdtos\\userexamreqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|d:\\thinkbridge\\thinkcode\\onlineexam\\src\\api\\controllers\\optioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\optioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -147,20 +159,8 @@
       "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\models\\questiondtos\\questionreqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|d:\\thinkbridge\\thinkcode\\onlineexam\\src\\core\\models\\userexamdtos\\userexamresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\models\\userexamdtos\\userexamresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|d:\\thinkbridge\\thinkcode\\onlineexam\\src\\api\\controllers\\examresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\examresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|d:\\thinkbridge\\thinkcode\\onlineexam\\src\\core\\models\\userexamdtos\\userexamreqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA2027A3-0E8C-4F38-B7A2-4ADDE3575825}|src\\Core\\thinkschool.OnlineExam.Core.csproj|solutionrelative:src\\core\\models\\userexamdtos\\userexamreqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|d:\\thinkbridge\\thinkcode\\onlineexam\\src\\api\\controllers\\userexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8915982-406A-451E-9862-37A0EBCB27DB}|src\\Api\\thinkschool.OnlineExam.Api.csproj|solutionrelative:src\\api\\controllers\\userexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DEEB9F0C-6D4F-426B-97B9-6209C42176B1}|src\\Services\\thinkschool.OnlineExam.Services.csproj|d:\\thinkbridge\\thinkcode\\onlineexam\\src\\services\\services\\userexamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -178,7 +178,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -207,58 +207,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "OptionController.cs",
-              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\OptionController.cs",
-              "RelativeDocumentMoniker": "src\\Api\\Controllers\\OptionController.cs",
-              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\OptionController.cs",
-              "RelativeToolTip": "src\\Api\\Controllers\\OptionController.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAUwC8AAAAUAAAA",
+              "Title": "UserExamController.cs",
+              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\UserExamController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Controllers\\UserExamController.cs",
+              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\UserExamController.cs",
+              "RelativeToolTip": "src\\Api\\Controllers\\UserExamController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAqwEQAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T07:27:03.236Z",
+              "WhenOpened": "2024-11-22T11:45:48.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmailAuthUserController.cs",
-              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\API\\Controllers\\EmailAuthUserController.cs",
-              "RelativeDocumentMoniker": "EmailAuth\\EmailAuth\\API\\Controllers\\EmailAuthUserController.cs",
-              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\API\\Controllers\\EmailAuthUserController.cs",
-              "RelativeToolTip": "EmailAuth\\EmailAuth\\API\\Controllers\\EmailAuthUserController.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAuwFwAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T07:26:38.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ExamController.cs",
-              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\ExamController.cs",
-              "RelativeDocumentMoniker": "src\\Api\\Controllers\\ExamController.cs",
-              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\ExamController.cs",
-              "RelativeToolTip": "src\\Api\\Controllers\\ExamController.cs",
-              "ViewState": "AQIAAIgAAAAAAAAAAAAUwEAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:56:45.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SectionController.cs",
-              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\SectionController.cs",
-              "RelativeDocumentMoniker": "src\\Api\\Controllers\\SectionController.cs",
-              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\SectionController.cs",
-              "RelativeToolTip": "src\\Api\\Controllers\\SectionController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAC8AAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T10:49:48.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "QuestionController.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\QuestionController.cs",
               "RelativeDocumentMoniker": "src\\Api\\Controllers\\QuestionController.cs",
@@ -266,8 +227,7 @@
               "RelativeToolTip": "src\\Api\\Controllers\\QuestionController.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAkwC8AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:38:23.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T07:38:23.956Z"
             },
             {
               "$type": "Document",
@@ -277,7 +237,7 @@
               "RelativeDocumentMoniker": "src\\Services\\IServices\\IExamService.cs",
               "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\IExamService.cs",
               "RelativeToolTip": "src\\Services\\IServices\\IExamService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAABAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAA0wBoAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T06:15:16.039Z",
               "EditorCaption": ""
@@ -290,14 +250,89 @@
               "RelativeDocumentMoniker": "src\\Services\\Services\\ExamService.cs",
               "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\Services\\ExamService.cs",
               "RelativeToolTip": "src\\Services\\Services\\ExamService.cs",
-              "ViewState": "AQIAAGEBAAAAAAAAAAAkwHkBAAAzAAAA",
+              "ViewState": "AQIAABkBAAAAAAAAAAAUwDUBAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T10:50:03.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserExamReqDto.cs",
+              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
+              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
+              "RelativeToolTip": "src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAkwCMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:44:01.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserExamResDto.cs",
+              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
+              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
+              "RelativeToolTip": "src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:44:02.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExamController.cs",
+              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\ExamController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Controllers\\ExamController.cs",
+              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\ExamController.cs",
+              "RelativeToolTip": "src\\Api\\Controllers\\ExamController.cs",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAUwJ8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:56:45.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "SectionController.cs",
+              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\SectionController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Controllers\\SectionController.cs",
+              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\SectionController.cs",
+              "RelativeToolTip": "src\\Api\\Controllers\\SectionController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAC8AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:49:48.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmailAuthUserController.cs",
+              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\API\\Controllers\\EmailAuthUserController.cs",
+              "RelativeDocumentMoniker": "EmailAuth\\EmailAuth\\API\\Controllers\\EmailAuthUserController.cs",
+              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\EmailAuth\\EmailAuth\\API\\Controllers\\EmailAuthUserController.cs",
+              "RelativeToolTip": "EmailAuth\\EmailAuth\\API\\Controllers\\EmailAuthUserController.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAuwFwAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T07:26:38.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OptionController.cs",
+              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\OptionController.cs",
+              "RelativeDocumentMoniker": "src\\Api\\Controllers\\OptionController.cs",
+              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\OptionController.cs",
+              "RelativeToolTip": "src\\Api\\Controllers\\OptionController.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAUwC8AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T07:27:03.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "GetExamDataViewModel.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\ExamDtos\\GetExamDataViewModel.cs",
               "RelativeDocumentMoniker": "src\\Core\\Models\\ExamDtos\\GetExamDataViewModel.cs",
@@ -305,12 +340,11 @@
               "RelativeToolTip": "src\\Core\\Models\\ExamDtos\\GetExamDataViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T07:24:46.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T07:24:46.369Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ISectionService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\ISectionService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\ISectionService.cs",
@@ -318,12 +352,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\ISectionService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:15:39.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:15:39.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "IApplicationUserService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\IApplicationUserService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\IApplicationUserService.cs",
@@ -331,12 +364,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\IApplicationUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:15:21.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:15:21.78Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "src\\Api\\Controllers\\AuthController.cs",
@@ -344,12 +376,11 @@
               "RelativeToolTip": "src\\Api\\Controllers\\AuthController.cs",
               "ViewState": "AQIAAHoAAAAAAAAAAAA0wIYAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:14:39.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:14:39.474Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ApplicationUserController.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\ApplicationUserController.cs",
               "RelativeDocumentMoniker": "src\\Api\\Controllers\\ApplicationUserController.cs",
@@ -357,12 +388,11 @@
               "RelativeToolTip": "src\\Api\\Controllers\\ApplicationUserController.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAAUwEwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:14:49.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:14:49.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "ApplicationUserService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\Services\\ApplicationUserService.cs",
               "RelativeDocumentMoniker": "src\\Services\\Services\\ApplicationUserService.cs",
@@ -370,12 +400,11 @@
               "RelativeToolTip": "src\\Services\\Services\\ApplicationUserService.cs",
               "ViewState": "AQIAAD8AAAAAAAAAAAAkwGQAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:14:12.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:14:12.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Exam.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Entities\\Exam.cs",
               "RelativeDocumentMoniker": "src\\Core\\Entities\\Exam.cs",
@@ -383,12 +412,11 @@
               "RelativeToolTip": "src\\Core\\Entities\\Exam.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:05:43.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:05:43.493Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "IUserAnswerService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\IUserAnswerService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\IUserAnswerService.cs",
@@ -396,12 +424,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\IUserAnswerService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwBEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:18:55.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T11:18:55.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "IServicesCollection.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\IServicesCollection.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\IServicesCollection.cs",
@@ -409,12 +436,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\IServicesCollection.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:15:37.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:15:37.278Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\ITokenService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\ITokenService.cs",
@@ -422,12 +448,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\ITokenService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:15:35.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:15:35.543Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "ISectionResultService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\ISectionResultService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\ISectionResultService.cs",
@@ -435,12 +460,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\ISectionResultService.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAA0wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:15:29.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:15:29.343Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "IOptionService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\IOptionService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\IOptionService.cs",
@@ -448,12 +472,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\IOptionService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:15:24.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:15:24.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "IExamResultService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\IExamResultService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\IExamResultService.cs",
@@ -461,12 +484,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\IExamResultService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:15:19.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:15:19.477Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "IUserExamService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\IUserExamService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\IUserExamService.cs",
@@ -474,12 +496,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\IUserExamService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:44:48.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T11:44:48.788Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "IQuestionService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\IServices\\IQuestionService.cs",
               "RelativeDocumentMoniker": "src\\Services\\IServices\\IQuestionService.cs",
@@ -487,12 +508,11 @@
               "RelativeToolTip": "src\\Services\\IServices\\IQuestionService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:46:52.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T07:46:52.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "20241120094659_initial.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\Migrations\\20241120094659_initial.cs",
               "RelativeDocumentMoniker": "src\\DataAccess\\Migrations\\20241120094659_initial.cs",
@@ -500,8 +520,7 @@
               "RelativeToolTip": "src\\DataAccess\\Migrations\\20241120094659_initial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:08:53.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:08:53.079Z"
             },
             {
               "$type": "Document",
@@ -513,12 +532,11 @@
               "RelativeToolTip": "src\\DataAccess\\Migrations\\20241126060959_Lookup_table_added.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:09:59.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:09:59.58Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "src\\DataAccess\\Migrations\\AppDbContextModelSnapshot.cs",
@@ -526,12 +544,11 @@
               "RelativeToolTip": "src\\DataAccess\\Migrations\\AppDbContextModelSnapshot.cs",
               "ViewState": "AQIAAE4BAAAAAAAAAAAkwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:08:50.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:08:50.613Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Api\\appsettings.json",
@@ -539,12 +556,11 @@
               "RelativeToolTip": "src\\Api\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-25T11:11:26.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T11:11:26.541Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "src\\Api\\appsettings.Development.json",
@@ -552,12 +568,11 @@
               "RelativeToolTip": "src\\Api\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-25T11:12:48.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T11:12:48.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\Persistence\\AppDbContext.cs",
               "RelativeDocumentMoniker": "src\\DataAccess\\Persistence\\AppDbContext.cs",
@@ -565,12 +580,11 @@
               "RelativeToolTip": "src\\DataAccess\\Persistence\\AppDbContext.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAUwBwAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:07:34.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:07:34.496Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "IAppDbContext.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\Interfaces\\IAppDbContext.cs",
               "RelativeDocumentMoniker": "src\\DataAccess\\Interfaces\\IAppDbContext.cs",
@@ -578,12 +592,11 @@
               "RelativeToolTip": "src\\DataAccess\\Interfaces\\IAppDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:07:42.671Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:07:42.671Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "DbConfiguration.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\DataAccess\\Persistence\\DbConfiguration.cs",
               "RelativeDocumentMoniker": "src\\DataAccess\\Persistence\\DbConfiguration.cs",
@@ -591,12 +604,11 @@
               "RelativeToolTip": "src\\DataAccess\\Persistence\\DbConfiguration.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAuwC8AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:07:27.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:07:27.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "Lookup.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Entities\\Lookup.cs",
               "RelativeDocumentMoniker": "src\\Core\\Entities\\Lookup.cs",
@@ -604,12 +616,11 @@
               "RelativeToolTip": "src\\Core\\Entities\\Lookup.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T06:05:23.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T06:05:23.253Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "UserAnswerService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\Services\\UserAnswerService.cs",
               "RelativeDocumentMoniker": "src\\Services\\Services\\UserAnswerService.cs",
@@ -617,12 +628,11 @@
               "RelativeToolTip": "src\\Services\\Services\\UserAnswerService.cs",
               "ViewState": "AQIAAD8AAAAAAAAAAAAywFIAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:21:51.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T11:21:51.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "SubmitAnswerDto.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\UserAnswerDtos\\SubmitAnswerDto.cs",
               "RelativeDocumentMoniker": "src\\Core\\Models\\UserAnswerDtos\\SubmitAnswerDto.cs",
@@ -630,12 +640,11 @@
               "RelativeToolTip": "src\\Core\\Models\\UserAnswerDtos\\SubmitAnswerDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:19:40.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T11:19:40.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "UserAnswerController.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\UserAnswerController.cs",
               "RelativeDocumentMoniker": "src\\Api\\Controllers\\UserAnswerController.cs",
@@ -643,12 +652,11 @@
               "RelativeToolTip": "src\\Api\\Controllers\\UserAnswerController.cs",
               "ViewState": "AQIAADwAAAAAAAAAAAA0wFsAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:20:40.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T11:20:40.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "QuestionDtoValidator.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Validations\\QuestionValidations\\QuestionDtoValidator.cs",
               "RelativeDocumentMoniker": "src\\Core\\Validations\\QuestionValidations\\QuestionDtoValidator.cs",
@@ -656,12 +664,11 @@
               "RelativeToolTip": "src\\Core\\Validations\\QuestionValidations\\QuestionDtoValidator.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:46:19.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T07:46:19.749Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "QuestionReqDto.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\QuestionDtos\\QuestionReqDto.cs",
               "RelativeDocumentMoniker": "src\\Core\\Models\\QuestionDtos\\QuestionReqDto.cs",
@@ -669,12 +676,11 @@
               "RelativeToolTip": "src\\Core\\Models\\QuestionDtos\\QuestionReqDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:43:07.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T07:43:07.648Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "QuestionService.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Services\\Services\\QuestionService.cs",
               "RelativeDocumentMoniker": "src\\Services\\Services\\QuestionService.cs",
@@ -682,12 +688,11 @@
               "RelativeToolTip": "src\\Services\\Services\\QuestionService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:42:56.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T07:42:56.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "ExamResultController.cs",
               "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\ExamResultController.cs",
               "RelativeDocumentMoniker": "src\\Api\\Controllers\\ExamResultController.cs",
@@ -695,21 +700,7 @@
               "RelativeToolTip": "src\\Api\\Controllers\\ExamResultController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T06:58:08.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "UserExamController.cs",
-              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\UserExamController.cs",
-              "RelativeDocumentMoniker": "src\\Api\\Controllers\\UserExamController.cs",
-              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Api\\Controllers\\UserExamController.cs",
-              "RelativeToolTip": "src\\Api\\Controllers\\UserExamController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:45:48.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T06:58:08.071Z"
             },
             {
               "$type": "Document",
@@ -721,34 +712,7 @@
               "RelativeToolTip": "src\\Services\\Services\\UserExamService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:45:06.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "UserExamResDto.cs",
-              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
-              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
-              "RelativeToolTip": "src\\Core\\Models\\UserExamDtos\\UserExamResDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:44:02.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "UserExamReqDto.cs",
-              "DocumentMoniker": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
-              "ToolTip": "D:\\ThinkBridge\\ThinkCode\\OnlineExam\\src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
-              "RelativeToolTip": "src\\Core\\Models\\UserExamDtos\\UserExamReqDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:44:01.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T11:45:06.02Z"
             }
           ]
         }
