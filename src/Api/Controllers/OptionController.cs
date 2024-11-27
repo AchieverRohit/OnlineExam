@@ -45,7 +45,7 @@ namespace thinkschool.OnlineExam.Api.Controllers
         /// <param name="requestDto">Request DTO for adding a Option.</param>
         /// <returns>Added Option details.</returns>
         [HttpPost("AddOption")]
-        [Authorize(Roles = "Teacher")]
+        //[Authorize(Roles = "Teacher")]
         public async Task<ActionResult<SingleResponse<OptionResDto>>> AddOption(AddOptionReqDto requestDto)
         {
             var result = await _servicesCollection.OptionServices.Save(requestDto);

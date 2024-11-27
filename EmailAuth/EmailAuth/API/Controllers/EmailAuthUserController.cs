@@ -90,7 +90,7 @@ namespace EmailAuth.API.Controllers
         /// </summary>
         /// <param name="saveUserProfileDto">Data transfer object for saving user profile.</param>
         /// <returns>Action result of the save user profile operation.</returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost("SaveProfile")]
         public async Task<ActionResult<BaseVM>> SaveUserProfile([FromBody] SaveUserProfileDto saveUserProfileDto)
         {

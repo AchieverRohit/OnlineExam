@@ -1,3 +1,4 @@
+using thinkschool.OnlineExam.Core.Models.ExamDtos;
 using thinkschool.OnlineExam.Core.Validations;
 
 public class ExamService : IExamService
@@ -344,6 +345,54 @@ public class ExamService : IExamService
 
         return new SingleResponse<ExamDetailsResponseDto> { Data = mappedResponse };
 
+    }
+
+    /// <summary>
+    /// Retrieves exam data for a specific user.
+    /// </summary>
+    /// <param name="userId">The ID of the user to retrieve exam data for.</param>
+    /// <param name="cancellationToken">Cancellation token for async operation.</param>
+    /// <returns>A list response containing the exam data view model.</returns>
+    /// <exception cref="ArgumentNullException">Thrown when userId is null or white space.</exception>
+    public async Task<ListResponse<GetExamDataViewModel>> GetExamDataByUserId(string userId, CancellationToken cancellationToken)
+    {
+        if (string.IsNullOrWhiteSpace(userId))
+            throw new ArgumentNullException(nameof(userId), "User ID cannot be null or empty.");
+
+        try
+        {
+            var currentDate = DateTime.Now;
+
+            var examDataList = await _dbContext.Exams
+                .Where(e => e.CreatedBy == userId)
+                .Select(exam => new GetExamDataViewModel
+                {
+                    ExamId = exam.ExamId,
+                    ExamName = exam.Title,
+                    ExamStatus = exam.IsActive && currentDate >= exam.StartDate && currentDate <= exam.EndDate ? "Active" : "Inactive",
+                    TotalStudents = _dbContext.UserExams.Count(ue => ue.ExamId == exam.ExamId),
+                    PassedStudents = _dbContext.UserExams.Join(
+                        _dbContext.ExamResults,
+                        ue => ue.UserExamId,
+                        er => er.UserExamId,
+                        (ue, er) => new { ue, er })
+                        .Count(x => x.er.ResultStatus == "Pass" && x.ue.ExamId == exam.ExamId),
+                })
+                .ToListAsync(cancellationToken);
+
+            foreach (var examData in examDataList)
+            {
+                examData.OverallPassStudentsPercentage = examData.TotalStudents > 0 ?
+                    (decimal)examData.PassedStudents / examData.TotalStudents * 100 : 0;
+            }
+
+            return new ListResponse<GetExamDataViewModel> { Data = examDataList };
+        }
+        catch (Exception ex)
+        {
+            // Log or handle exception as needed
+            throw new Exception("An error occurred while fetching exam data.", ex);
+        }
     }
 
 }

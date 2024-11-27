@@ -1,3 +1,5 @@
+using thinkschool.OnlineExam.Core.Models.ExamDtos;
+
 public interface IExamService
 {
     Task<ListResponse<ExamResDto>> GetAll(GetAllExamReqDto? requestDto);
@@ -23,4 +25,12 @@ public interface IExamService
     /// <param name="cancellationToken">Cancellation token to cancel the operation.</param>
     /// <returns>A SingleResponse containing the exam details.</returns>
     Task<SingleResponse<ExamDetailsResponseDto>> GetExamWithDetails(int examId, CancellationToken cancellationToken);
+
+    /// <summary>
+    /// Retrieves exam data for a specific user.
+    /// </summary>
+    /// <param name="userId">The ID of the user to retrieve exam data for.</param>
+    /// <param name="cancellationToken">Cancellation token for async operation.</param>
+    /// <returns>A list response containing the exam data view model.</returns>
+    Task<ListResponse<GetExamDataViewModel>> GetExamDataByUserId(string userId, CancellationToken cancellationToken);
 }

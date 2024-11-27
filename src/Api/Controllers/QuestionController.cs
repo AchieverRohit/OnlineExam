@@ -45,7 +45,7 @@ namespace thinkschool.OnlineExam.Api.Controllers
         /// <param name="requestDto">Request DTO for adding a Question.</param>
         /// <returns>Added Question details.</returns>
         [HttpPost("AddQuestion")]
-        [Authorize(Roles = "Teacher")]
+        //[Authorize(Roles = "Teacher")]
         public async Task<ActionResult<SingleResponse<QuestionResDto>>> AddQuestion(AddQuestionReqDto requestDto)
         {
             var result = await _servicesCollection.QuestionServices.Save(requestDto);

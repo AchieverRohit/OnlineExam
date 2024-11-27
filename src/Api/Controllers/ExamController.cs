@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
+using thinkschool.OnlineExam.Core.Models.ExamDtos;
 
 namespace thinkschool.OnlineExam.Api.Controllers
 {
@@ -55,7 +56,7 @@ namespace thinkschool.OnlineExam.Api.Controllers
         /// <param name = "requestDto">Request DTO for updating a Exam.</param>
         /// <returns>Updated Exam details.</returns>
         [HttpPost("UpdateExam")]
-        [Authorize(Roles = "Teacher")]
+       // [Authorize(Roles = "Teacher")]
         public async Task<ActionResult<SingleResponse<ExamResDto>>> UpdateExam(UpdateExamReqDto requestDto)
         {
             var result = await _servicesCollection.ExamServices.Update(requestDto);
@@ -80,7 +81,7 @@ namespace thinkschool.OnlineExam.Api.Controllers
         /// <param name = "cancellationToken">Token to cancel the asynchronous operation.</param>
         /// <returns>ActionResult containing a ListResponse of ExamDto.</returns>
         [HttpGet("GetActiveExams")]
-        [Authorize(Roles = "Teacher")]
+        //[Authorize(Roles = "Teacher")]
         public async Task<ActionResult<ListResponse<ExamDto>>> GetActiveExams(CancellationToken cancellationToken)
         {
             if (cancellationToken == null)
@@ -107,7 +108,7 @@ namespace thinkschool.OnlineExam.Api.Controllers
         /// <param name="cancellationToken">The cancellation token for task cancellation.</param>
         /// <returns>An action result containing a list response of exam DTOs.</returns>
         [HttpGet("GetExamsByTeacherId")]
-        [Authorize(Roles = "Teacher")]
+        //[Authorize(Roles = "Teacher")]
         public async Task<ActionResult<ListResponse<ExamDto>>> GetExamsByTeacherId(string teacherId, CancellationToken cancellationToken)
         {
             if (string.IsNullOrWhiteSpace(teacherId))
@@ -157,6 +158,22 @@ namespace thinkschool.OnlineExam.Api.Controllers
             }
 
             var result = await _examService.GetExamWithDetails(examId, cancellationToken);
+            return HandleResult(result);
+        }
+
+        /// <summary>
+        /// API endpoint to get exam data by user ID.
+        /// </summary>
+        /// <param name="userId">The ID of the user.</param>
+        /// <param name="cancellationToken">Cancellation token for async operation.</param>
+        /// <returns>List of exam data wrapped in a ListResponse.</returns>
+        [HttpPost("GetExamDataByUserId")]
+        public async Task<ActionResult<ListResponse<GetExamDataViewModel>>> GetExamDataByUserId([FromBody] string userId, CancellationToken cancellationToken)
+        {
+            if (string.IsNullOrWhiteSpace(userId))
+                return BadRequest("User ID cannot be null or empty.");
+
+            var result = await _examService.GetExamDataByUserId(userId, cancellationToken);
             return HandleResult(result);
         }
     }
