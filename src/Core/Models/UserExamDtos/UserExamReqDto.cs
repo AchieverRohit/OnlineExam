@@ -39,13 +39,9 @@ namespace thinkschool.OnlineExam.Core.Models
         
         public DateTime StartedOn { get; set; }
         
-        public DateTime? FinishedOn { get; set; }
-        
         public string ExamStatus { get; set; }
         
         public decimal? TotalMarks { get; set; }
-        
-        public bool? IsAutoSubmitted { get; set; }
         
         public int NoOfAttempt { get; set; }
         
