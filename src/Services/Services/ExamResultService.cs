@@ -1,5 +1,6 @@
 
 using thinkschool.OnlineExam.Core.Models.ExamResultDtos;
+using thinkschool.OnlineExam.Core.Models.SectionResultDtos;
 
 namespace thinkschool.OnlineExam.Services.Services;
 public class ExamResultService : IExamResultService
@@ -194,6 +195,57 @@ public class ExamResultService : IExamResultService
             // Log the exception (implement logging according to your logging framework)
             throw;
         }
+    }
+
+    /// <summary>
+    /// Retrieves the exam result details for a specific user exam.
+    /// </summary>
+    /// <param name="userExamId">The ID of the user exam.</param>
+    /// <param name="cancellationToken">Token for canceling the operation.</param>
+    /// <returns>Returns the exam result details.</returns>
+    /// <exception cref="ArgumentException">Thrown when userExamId is less than or equal to 0.</exception>
+    public async Task<SingleResponse<ExamResultDetailsViewModel>> GetExamResultByUserExamId(int userExamId, CancellationToken cancellationToken)
+    {
+        if (userExamId <= 0)
+        {
+            throw new ArgumentException("User exam ID must be greater than 0.", nameof(userExamId));
+        }
+
+        var examResult = await _dbContext.ExamResults
+            .Where(er => er.UserExamId == userExamId)
+            .Select(er => new ExamResultDetailsViewModel
+            {
+                ExamResultId = er.ExamResultId,
+                TotalScore = er.TotalObtainedMarks,
+                ResultStatus = er.ResultStatus,
+                SectionResults = _dbContext.SectionResults
+                    .Where(sr => sr.UserExamId == userExamId)
+                    .Join(_dbContext.Sections,
+                          sr => sr.SectionId,
+                          s => s.SectionId,
+                          (sr, s) => new SectionResultDetailsViewModel
+                          {
+                              SectionId = sr.SectionId,
+                              SectionName = s.Title,
+                              QuestionsAttempted = sr.QuestionsAttempted,
+                              SectionTotalMarks = s.TotalMarks,
+                              ObtainedMarks = sr.MarksObtained,
+                              SectionResultStatus = sr.ResultStatus
+                          })
+                    .ToList()
+            })
+            .FirstOrDefaultAsync(cancellationToken);
+
+        if (examResult == null)
+        {
+            return new SingleResponse<ExamResultDetailsViewModel>
+            {
+                Status = HttpStatusCode.NotFound,
+                Messages = new List<ResponseMessage> { new ResponseMessage { Message = "Exam result not found for the given UserExamId." } }
+            };
+        }
+
+        return new SingleResponse<ExamResultDetailsViewModel> { Data = examResult };
     }
 }
 

@@ -1,4 +1,6 @@
 
+using thinkschool.OnlineExam.Core.Models.ExamResultDtos;
+
 namespace thinkschool.OnlineExam.Api.Controllers
 {
     public class ExamResultController : BaseController
@@ -108,6 +110,24 @@ namespace thinkschool.OnlineExam.Api.Controllers
                 // Log the exception (implement logging according to your logging framework)
                 return StatusCode(500, "An error occurred while processing your request.");
             }
+        }
+
+        /// <summary>
+        /// Endpoint to get exam results by user exam ID.
+        /// </summary>
+        /// <param name="userExamId">The ID of the user exam.</param>
+        /// <param name="cancellationToken">Token for canceling the operation.</param>
+        /// <returns>Returns exam result details or error status.</returns>
+        [HttpPost("GetExamResultByUserExamId")]
+        public async Task<ActionResult<SingleResponse<ExamResultDetailsViewModel>>> GetExamResultByUserExamId([FromBody] int userExamId, CancellationToken cancellationToken)
+        {
+            if (userExamId <= 0)
+            {
+                return BadRequest("User exam ID must be greater than 0.");
+            }
+
+            var result = await _servicesCollection.ExamResultServices.GetExamResultByUserExamId(userExamId, cancellationToken);
+            return HandleResult(result);
         }
 
     }

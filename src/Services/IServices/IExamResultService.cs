@@ -20,6 +20,14 @@ public interface IExamResultService
     /// <param name="cancellationToken">CancellationToken for async operation.</param>
     /// <returns>A ListResponse containing a list of ExamResultDto.</returns>
     Task<ListResponse<ExamResultViewModel>> GetExamResultsByExamId(int examId, CancellationToken cancellationToken);
+
+    /// <summary>
+    /// Retrieves the exam result details for a specific user exam.
+    /// </summary>
+    /// <param name="userExamId">The ID of the user exam.</param>
+    /// <param name="cancellationToken">Token for canceling the operation.</param>
+    /// <returns>Returns the exam result details.</returns>
+    Task<SingleResponse<ExamResultDetailsViewModel>> GetExamResultByUserExamId(int userExamId, CancellationToken cancellationToken);
 }
 
 
