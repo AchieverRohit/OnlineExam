@@ -1,4 +1,6 @@
 
+using thinkschool.OnlineExam.Core.Models.ExamResultDtos;
+
 namespace thinkschool.OnlineExam.Services.Services;
 public class ExamResultService : IExamResultService
 {
@@ -158,6 +160,40 @@ public class ExamResultService : IExamResultService
             Data = examResultDto,
             Status = HttpStatusCode.Created
         };
+    }
+
+    /// <summary>
+    /// Retrieves exam results for a given exam ID.
+    /// </summary>
+    /// <param name="examId">The ID of the exam.</param>
+    /// <param name="cancellationToken">CancellationToken for async operation.</param>
+    /// <returns>A ListResponse containing a list of ExamResultDto.</returns>
+    /// <exception cref="ArgumentException">Thrown when examId is less than or equal to zero.</exception>
+    public async Task<ListResponse<ExamResultViewModel>> GetExamResultsByExamId(int examId, CancellationToken cancellationToken)
+    {
+        if (examId <= 0) throw new ArgumentException("Exam ID must be greater than zero.", nameof(examId));
+
+        try
+        {
+            var examResults = await _dbContext.UserExams
+                .Where(ue => ue.ExamId == examId)
+                .Join(_dbContext.ApplicationUsers, ue => ue.UserId, au => au.Id, (ue, au) => new { ue, au })
+                .Join(_dbContext.ExamResults, combined => combined.ue.UserExamId, er => er.UserExamId, (combined, er) => new ExamResultViewModel
+                {
+                    UserExamId = combined.ue.UserExamId,
+                    Name = combined.au.FirstName + " " + combined.au.LastName,
+                    Percentage = (combined.ue.TotalMarks != 0) ? er.TotalObtainedMarks / (decimal)combined.ue.TotalMarks * 100 : 0,
+                    ResultStatus = er.ResultStatus
+                })
+                .ToListAsync(cancellationToken);
+
+            return new ListResponse<ExamResultViewModel> { Data = examResults };
+        }
+        catch (Exception ex)
+        {
+            // Log the exception (implement logging according to your logging framework)
+            throw;
+        }
     }
 }
 

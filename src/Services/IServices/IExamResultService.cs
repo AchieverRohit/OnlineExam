@@ -1,4 +1,6 @@
 
+using thinkschool.OnlineExam.Core.Models.ExamResultDtos;
+
 namespace thinkschool.OnlineExam.Services.IServices;
 public interface IExamResultService
 {
@@ -10,6 +12,14 @@ public interface IExamResultService
     Task<BaseResponse> Delete(int  ExamResultId);
 
     Task<SingleResponse<ExamResultShortDto>> CalculateAndCreateExamResult(int userExamId, CancellationToken cancellationToken);
+
+    /// <summary>
+    /// Retrieves exam results for a given exam ID.
+    /// </summary>
+    /// <param name="examId">The ID of the exam.</param>
+    /// <param name="cancellationToken">CancellationToken for async operation.</param>
+    /// <returns>A ListResponse containing a list of ExamResultDto.</returns>
+    Task<ListResponse<ExamResultViewModel>> GetExamResultsByExamId(int examId, CancellationToken cancellationToken);
 }
 
 

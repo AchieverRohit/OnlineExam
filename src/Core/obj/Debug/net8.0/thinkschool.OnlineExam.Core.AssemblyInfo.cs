@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("thinkschool.OnlineExam.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66670e0f013687b6a81ef489cd7ba380c7940891")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+018afaa8d4f4f223f8854eaa810b6cbe5ec6784b")]
 [assembly: System.Reflection.AssemblyProductAttribute("thinkschool.OnlineExam.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("thinkschool.OnlineExam.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
