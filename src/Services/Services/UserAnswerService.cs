@@ -87,15 +87,20 @@ public class UserAnswerService : IUserAnswerService
             _dbContext.UserAnswers.Add(userAnswer);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            var userAnswerOptions = submitAnswerDto.OptionIds.Select(optionId => new UserAnswerOption
+            if (submitAnswerDto.OptionIds.Count > 0)
             {
-                UserAnswerId = userAnswer.UserAnswerId,
-                OptionId = optionId
-            }).ToList();
+                var userAnswerOptions = submitAnswerDto.OptionIds.Select(optionId => new UserAnswerOption
+                {
+                    UserAnswerId = userAnswer.UserAnswerId,
+                    OptionId = optionId
+                }).ToList();
 
-            _dbContext.UserAnswerOptions.AddRange(userAnswerOptions);
+                _dbContext.UserAnswerOptions.AddRange(userAnswerOptions);
 
-            await _dbContext.SaveChangesAsync(cancellationToken);
+                await _dbContext.SaveChangesAsync(cancellationToken);
+            }
+
+            
 
             return new SingleResponse<string>
             {
